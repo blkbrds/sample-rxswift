@@ -13,6 +13,10 @@ class ExamplesController: UITableViewController {
     enum Demo: Int {
         case calculator = 0
 
+        static var numberExamples: Int {
+            return 1
+        }
+
         var storyboard: String {
             switch self {
             case .calculator: return "Calculator"
@@ -47,6 +51,5 @@ class ExamplesController: UITableViewController {
             let controller: CalculatorController = storyboard.instantiateViewController()
             navigationController?.pushViewController(controller, animated: true)
         }
-
     }
 }
