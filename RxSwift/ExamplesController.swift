@@ -25,7 +25,7 @@ class ExamplesController: UITableViewController {
     }
 
     // TODO: examples implement
-    var examples = ["Calculator", "Validation", "MVVM - Demo", "MVVM - GitHub Search Repos"]
+    var examples: [String] = ["Calculator", "Validation", "MVVM - Demo", "MVVM - GitHub Search Repos"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
