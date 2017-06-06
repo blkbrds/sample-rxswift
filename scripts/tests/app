@@ -3,8 +3,8 @@
 if [[ "$CI" != 'true' ]]; then
     echo 'Exporting build environment variables...'
     export SDK='iphonesimulator10.3'
-    export SCHEME='RxSwift'
-    export WORKSPACE='RxSwift.xcworkspace'
+    export SCHEME='RxSwift-Demo'
+    export WORKSPACE='RxSwift-Demo.xcworkspace'
     export DESTINATION='OS=10.3,name=iPhone 7'
     export CONFIGURATION='Debug'
 fi

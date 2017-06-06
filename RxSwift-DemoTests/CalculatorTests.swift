@@ -1,15 +1,15 @@
 //
-//  RxSwiftTests.swift
-//  RxSwiftTests
+//  RxSwift_DemoTests.swift
+//  RxSwift-DemoTests
 //
-//  Created by Huynh Quang Tien on 6/5/17.
+//  Created by Huynh Quang Tien on 6/6/17.
 //  Copyright © 2017 Asian Tech. All rights reserved.
 //
 
 import XCTest
-@testable import RxSwift
+@testable import RxSwift_Demo
 
-class RxSwiftTests: XCTestCase {
+class CalculatorTests: XCTestCase {
 
     override func setUp() {
         super.setUp()

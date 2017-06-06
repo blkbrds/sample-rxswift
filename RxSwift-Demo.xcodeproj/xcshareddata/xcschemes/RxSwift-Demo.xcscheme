@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D4541BD51EE50FDE00686A27"
-               BuildableName = "RxSwift.app"
-               BlueprintName = "RxSwift"
-               ReferencedContainer = "container:RxSwift.xcodeproj">
+               BlueprintIdentifier = "D4F6360D1EE6B43400DFF4F4"
+               BuildableName = "RxSwift-Demo.app"
+               BlueprintName = "RxSwift-Demo"
+               ReferencedContainer = "container:RxSwift-Demo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,20 +33,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D4541BE91EE50FDF00686A27"
-               BuildableName = "RxSwiftTests.xctest"
-               BlueprintName = "RxSwiftTests"
-               ReferencedContainer = "container:RxSwift.xcodeproj">
+               BlueprintIdentifier = "D4F636211EE6B43500DFF4F4"
+               BuildableName = "RxSwift-DemoTests.xctest"
+               BlueprintName = "RxSwift-DemoTests"
+               ReferencedContainer = "container:RxSwift-Demo.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D4541BD51EE50FDE00686A27"
-            BuildableName = "RxSwift.app"
-            BlueprintName = "RxSwift"
-            ReferencedContainer = "container:RxSwift.xcodeproj">
+            BlueprintIdentifier = "D4F6360D1EE6B43400DFF4F4"
+            BuildableName = "RxSwift-Demo.app"
+            BlueprintName = "RxSwift-Demo"
+            ReferencedContainer = "container:RxSwift-Demo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -66,10 +66,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D4541BD51EE50FDE00686A27"
-            BuildableName = "RxSwift.app"
-            BlueprintName = "RxSwift"
-            ReferencedContainer = "container:RxSwift.xcodeproj">
+            BlueprintIdentifier = "D4F6360D1EE6B43400DFF4F4"
+            BuildableName = "RxSwift-Demo.app"
+            BlueprintName = "RxSwift-Demo"
+            ReferencedContainer = "container:RxSwift-Demo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -85,10 +85,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D4541BD51EE50FDE00686A27"
-            BuildableName = "RxSwift.app"
-            BlueprintName = "RxSwift"
-            ReferencedContainer = "container:RxSwift.xcodeproj">
+            BlueprintIdentifier = "D4F6360D1EE6B43400DFF4F4"
+            BuildableName = "RxSwift-Demo.app"
+            BlueprintName = "RxSwift-Demo"
+            ReferencedContainer = "container:RxSwift-Demo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

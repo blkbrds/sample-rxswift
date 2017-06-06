@@ -12,8 +12,8 @@ cache:
 env:
   global:
     - SDK="iphonesimulator10.3"
-    - SCHEME='RxSwift'
-    - WORKSPACE='RxSwift.xcworkspace'
+    - SCHEME='RxSwift-Demo'
+    - WORKSPACE='RxSwift-Demo.xcworkspace'
     - DESTINATION="OS=10.3,name=iPhone 7"
     - CONFIGURATION='Debug'
 install:
