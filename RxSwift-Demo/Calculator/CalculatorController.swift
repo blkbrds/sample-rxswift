@@ -42,8 +42,8 @@ class CalculatorController: BaseViewController {
             let second = Int(secondValue) ?? 0
             return self.calculate(first: first, second: second, math: math)
         }.map { $0.description }
-            .bind(to: resultLabel.rx.text)
-            .disposed(by: disposeBag)
+         .bind(to: resultLabel.rx.text)
+         .disposed(by: disposeBag)
 
         // receive events tap button
         taps.subscribe(onNext: { [weak self] math in
