@@ -28,7 +28,10 @@ class CalculatorController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupObservable()
+    }
 
+    private func setupObservable() {
         // create observable that return type enum Math
         let plus = plusButton.rx.tap.map { Math.plus }
         let sub = subButton.rx.tap.map { Math.sub }
@@ -41,9 +44,10 @@ class CalculatorController: BaseViewController {
             let first = Int(firstValue) ?? 0
             let second = Int(secondValue) ?? 0
             return self.calculate(first: first, second: second, math: math)
-        }.map { $0.description }
-         .bind(to: resultLabel.rx.text)
-         .disposed(by: disposeBag)
+        }
+            .map { $0.description }
+            .bind(to: resultLabel.rx.text)
+            .disposed(by: disposeBag)
 
         // receive events tap button
         taps.subscribe(onNext: { [weak self] math in
@@ -53,7 +57,8 @@ class CalculatorController: BaseViewController {
             this.subButton.backgroundColor = (math == .sub ? selectedColor : UIColor.lightGray)
             this.multiButton.backgroundColor = (math == .multi ? selectedColor : UIColor.lightGray)
             this.divideButton.backgroundColor = (math == .divide ? selectedColor : UIColor.lightGray)
-        }).disposed(by: disposeBag)
+        })
+            .disposed(by: disposeBag)
     }
 
     private func calculate(first: Int, second: Int, math: Math) -> Int {
@@ -61,7 +66,7 @@ class CalculatorController: BaseViewController {
         case .plus: return first + second
         case .sub: return first - second
         case .multi: return first * second
-        case .divide: return  second > 0 ? (first / second) : 0
+        case .divide: return second > 0 ? (first / second) : 0
         }
     }
 }
