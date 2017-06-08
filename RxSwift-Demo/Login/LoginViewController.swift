@@ -20,13 +20,15 @@ class LoginViewController: BaseViewController {
 
     private var usernameObservable: Observable<String> {
         return usernameTextField.rx.text.throttle(0.5, scheduler: MainScheduler.instance).map { text in
-            return text ?? ""
+            guard let text = text else { return "" }
+            return text
         }
     }
 
     private var passwordObservable: Observable<String> {
         return passwordTextField.rx.text.throttle(0.5, scheduler: MainScheduler.instance).map { text in
-            return text ?? ""
+            guard let text = text else { return "" }
+            return text
         }
     }
 
