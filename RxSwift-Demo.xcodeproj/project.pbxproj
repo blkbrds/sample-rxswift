@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		084EA909C281EAB99699ECF7 /* Pods_RxSwift_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4558422CCC550C5F161FC40 /* Pods_RxSwift_Demo.framework */; };
+		56A553D31EE8FF930048B001 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A553D21EE8FF930048B001 /* LoginViewController.swift */; };
+		56A553D71EE8FFAE0048B001 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56A553D61EE8FFAE0048B001 /* Login.storyboard */; };
+		56A553D91EE900420048B001 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A553D81EE900420048B001 /* LoginViewModel.swift */; };
 		8760F423E98AFB67D7DE2C60 /* Pods_RxSwift_DemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 470E2F22AEB86B912A8634D2 /* Pods_RxSwift_DemoTests.framework */; };
 		D4F636121EE6B43400DFF4F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F636111EE6B43400DFF4F4 /* AppDelegate.swift */; };
 		D4F636171EE6B43400DFF4F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4F636151EE6B43400DFF4F4 /* Main.storyboard */; };
@@ -35,6 +38,9 @@
 /* Begin PBXFileReference section */
 		04FB2AF8C8D0C756146ED66E /* Pods-RxSwift-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwift-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwift-Demo/Pods-RxSwift-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		470E2F22AEB86B912A8634D2 /* Pods_RxSwift_DemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwift_DemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		56A553D21EE8FF930048B001 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		56A553D61EE8FFAE0048B001 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		56A553D81EE900420048B001 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		7307F952489D5FAECE7735A4 /* Pods-RxSwift-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwift-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwift-Demo/Pods-RxSwift-Demo.release.xcconfig"; sourceTree = "<group>"; };
 		A4558422CCC550C5F161FC40 /* Pods_RxSwift_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwift_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1948E6B4741159DB8E288A9 /* Pods-RxSwift-DemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwift-DemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwift-DemoTests/Pods-RxSwift-DemoTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -85,6 +91,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		56A553D11EE8FF6D0048B001 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				56A553D21EE8FF930048B001 /* LoginViewController.swift */,
+				56A553D61EE8FFAE0048B001 /* Login.storyboard */,
+				56A553D81EE900420048B001 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		D4F636051EE6B43400DFF4F4 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +124,7 @@
 		D4F636101EE6B43400DFF4F4 /* RxSwift-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				56A553D11EE8FF6D0048B001 /* Login */,
 				D4F636311EE6B50300DFF4F4 /* Calculator */,
 				D4F636341EE6B50300DFF4F4 /* ExamplesController.swift */,
 				D4F636351EE6B50300DFF4F4 /* Utils */,
@@ -253,6 +270,7 @@
 				D4F6361C1EE6B43400DFF4F4 /* LaunchScreen.storyboard in Resources */,
 				D4F636191EE6B43400DFF4F4 /* Assets.xcassets in Resources */,
 				D4F636381EE6B50300DFF4F4 /* Calculator.storyboard in Resources */,
+				56A553D71EE8FFAE0048B001 /* Login.storyboard in Resources */,
 				D4F636171EE6B43400DFF4F4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,9 +396,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56A553D31EE8FF930048B001 /* LoginViewController.swift in Sources */,
 				D4F6363C1EE6B50300DFF4F4 /* ViewController.swift in Sources */,
 				D4F6363B1EE6B50300DFF4F4 /* Storyboard.swift in Sources */,
 				D4F636121EE6B43400DFF4F4 /* AppDelegate.swift in Sources */,
+				56A553D91EE900420048B001 /* LoginViewModel.swift in Sources */,
 				D4F636391EE6B50300DFF4F4 /* CalculatorController.swift in Sources */,
 				D4F6363A1EE6B50300DFF4F4 /* ExamplesController.swift in Sources */,
 				D4F636421EE7938B00DFF4F4 /* BaseViewController.swift in Sources */,
