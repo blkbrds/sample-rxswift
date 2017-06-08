@@ -19,6 +19,7 @@
 		D4F6363B1EE6B50300DFF4F4 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F636361EE6B50300DFF4F4 /* Storyboard.swift */; };
 		D4F6363C1EE6B50300DFF4F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F636371EE6B50300DFF4F4 /* ViewController.swift */; };
 		D4F6363F1EE6C11D00DFF4F4 /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F6363E1EE6C11D00DFF4F4 /* CalculatorTests.swift */; };
+		D4F636421EE7938B00DFF4F4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F636411EE7938B00DFF4F4 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		D4F636361EE6B50300DFF4F4 /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		D4F636371EE6B50300DFF4F4 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D4F6363E1EE6C11D00DFF4F4 /* CalculatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorTests.swift; sourceTree = "<group>"; };
+		D4F636411EE7938B00DFF4F4 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		FBF947A6E9B4F6DE583B3973 /* Pods-RxSwift-DemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwift-DemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwift-DemoTests/Pods-RxSwift-DemoTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,6 +116,7 @@
 				D4F636181EE6B43400DFF4F4 /* Assets.xcassets */,
 				D4F6361A1EE6B43400DFF4F4 /* LaunchScreen.storyboard */,
 				D4F6361D1EE6B43400DFF4F4 /* Info.plist */,
+				D4F636411EE7938B00DFF4F4 /* BaseViewController.swift */,
 			);
 			path = "RxSwift-Demo";
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				D4F636121EE6B43400DFF4F4 /* AppDelegate.swift in Sources */,
 				D4F636391EE6B50300DFF4F4 /* CalculatorController.swift in Sources */,
 				D4F6363A1EE6B50300DFF4F4 /* ExamplesController.swift in Sources */,
+				D4F636421EE7938B00DFF4F4 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +459,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
+					"TRACE_RESOURCES=1",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -466,7 +471,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG -D TRACE_RESOURCES -D -Xfrontend -debug-time-function-bodies";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
