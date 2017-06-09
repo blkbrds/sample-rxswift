@@ -12,14 +12,14 @@ class ExamplesController: UITableViewController {
 
     enum Demo: Int {
         case calculator = 0
-
-        static var numberExamples: Int {
-            return 1
-        }
+        case validation
+        case mvvmDemo
 
         var storyboard: String {
             switch self {
             case .calculator: return "Calculator"
+            case .validation: return "Validation"
+            case .mvvmDemo: return "ListCar"
             }
         }
     }
@@ -44,11 +44,16 @@ class ExamplesController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let demo = Demo(rawValue: indexPath.row) else { fatalError() }
+        guard let demo = Demo(rawValue: indexPath.row) else { return }
         let storyboard = UIStoryboard(name: demo.storyboard, bundle: nil)
         switch demo {
         case .calculator:
             let controller: CalculatorController = storyboard.instantiateViewController()
+            navigationController?.pushViewController(controller, animated: true)
+        case .validation:
+            return
+        case .mvvmDemo:
+            let controller: CarController = storyboard.instantiateViewController()
             navigationController?.pushViewController(controller, animated: true)
         }
     }
