@@ -36,17 +36,17 @@ class SearchController: BaseViewController {
 
     // MARK: - Rx
     private func configRx() {
-        searchBar.rx.text // Observable property
-            .orEmpty
-            .distinctUntilChanged() // If didn't occur, check if the new value is the same as old.
-            .subscribe(onNext: {[weak self] (text) in // Here subscribe to every new value
-                guard let this = self else { return }
-                this.dataSearch = this.data.filter({ (str) -> Bool in
-                    str.lowercased().contains(text.lowercased())
-                })
-                this.tableView.reloadData()
-            }, onError: nil, onCompleted: nil, onDisposed: nil)
-        .disposed(by: dispose) // dispose it on deinit.
+//        searchBar.rx.text // Observable property
+//            .orEmpty
+//            .distinctUntilChanged() // If didn't occur, check if the new value is the same as old.
+//            .subscribe(onNext: {[weak self] (text) in // Here subscribe to every new value
+//                guard let this = self else { return }
+//                this.dataSearch = this.data.filter({ (str) -> Bool in
+//                    str.lowercased().contains(text.lowercased())
+//                })
+//                this.tableView.reloadData()
+//            }, onError: nil, onCompleted: nil, onDisposed: nil)
+//        .disposed(by: dispose) // dispose it on deinit.
     }
 }
 
