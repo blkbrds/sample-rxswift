@@ -28,25 +28,30 @@ class SearchController: BaseViewController {
 
     private func config() {
         data.removeAll()
+        dataSearch.removeAll()
         for i in 0 ... 30 {
             let item = "Number is \(i)"
             data.append(item)
         }
+        dataSearch = data
     }
 
     // MARK: - Rx
     private func configRx() {
-//        searchBar.rx.text // Observable property
-//            .orEmpty
-//            .distinctUntilChanged() // If didn't occur, check if the new value is the same as old.
-//            .subscribe(onNext: {[weak self] (text) in // Here subscribe to every new value
-//                guard let this = self else { return }
-//                this.dataSearch = this.data.filter({ (str) -> Bool in
-//                    str.lowercased().contains(text.lowercased())
-//                })
-//                this.tableView.reloadData()
-//            }, onError: nil, onCompleted: nil, onDisposed: nil)
-//        .disposed(by: dispose) // dispose it on deinit.
+        searchBar.rx.text // Observable property
+            .orEmpty
+            .distinctUntilChanged() // If didn't occur, check if the new value is the same as old.
+            .subscribe(onNext: {[weak self] (text) in // Here subscribe to every new value
+                guard let this = self else { return }
+                this.dataSearch = this.data.filter({ (str) -> Bool in
+                    str.lowercased().contains(text.lowercased())
+                })
+                if this.dataSearch.isEmpty && text.isEmpty {
+                    this.dataSearch = this.data
+                }
+                this.tableView.reloadData()
+            }, onError: nil, onCompleted: nil, onDisposed: nil)
+        .disposed(by: dispose) // dispose it on deinit.
     }
 }
 
