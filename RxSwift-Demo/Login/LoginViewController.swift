@@ -30,7 +30,6 @@ class LoginViewController: BaseViewController, MVVM.View {
     }
 
     private func setupObservable() {
-        guard let viewModel = viewModel else { return }
         viewModel.loginObservable.bind { user, error in
             // TODO: - add logic for login
             if let error = error {
