@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import RxSwift
-import RxCocoa
+// import RxSwift
+// import RxCocoa
 
 class SearchController: BaseViewController {
     @IBOutlet private weak var tableView: UITableView!
@@ -35,31 +35,31 @@ class SearchController: BaseViewController {
 
     // MARK: - Rx
     private func configRx() {
-        searchBar.rx.text.orEmpty // Observable property
-        .distinctUntilChanged() // If didn't occur, check if the new value is the same as old.
-        .subscribe(onNext: { [weak self] (text) in // Here subscribe to every new value
-            guard let this = self else { return }
-            this.dataSearch = this.data.filter({ (str) -> Bool in
-                str.lowercased().contains(text.lowercased())
-            })
-            if this.dataSearch.isEmpty && text.isEmpty {
-                this.dataSearch = this.data
-            }
-            this.tableView.reloadData()
-        })
-        .disposed(by: disposeBag) // dispose it on deinit.
+//        searchBar.rx.text.orEmpty // Observable property
+//        .distinctUntilChanged() // If didn't occur, check if the new value is the same as old.
+//        .subscribe(onNext: { [weak self] (text) in // Here subscribe to every new value
+//            guard let this = self else { return }
+//            this.dataSearch = this.data.filter({ (str) -> Bool in
+//                str.lowercased().contains(text.lowercased())
+//            })
+//            if this.dataSearch.isEmpty && text.isEmpty {
+//                this.dataSearch = this.data
+//            }
+//            this.tableView.reloadData()
+//        })
+//        .disposed(by: disposeBag) // dispose it on deinit.
     }
 }
 
-extension SearchController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSearch.count
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        let item = dataSearch[indexPath.row]
-        cell.textLabel?.text = item
-        return cell
-    }
-}
+// extension SearchController: UITableViewDataSource {
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return dataSearch.count
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+//        let item = dataSearch[indexPath.row]
+//        cell.textLabel?.text = item
+//        return cell
+//    }
+// }
