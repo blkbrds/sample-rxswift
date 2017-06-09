@@ -9,8 +9,9 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import MVVM
 
-class LoginViewController: BaseViewController {
+class LoginViewController: BaseViewController, MVVM.View {
 
     @IBOutlet private weak var usernameTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
@@ -18,39 +19,28 @@ class LoginViewController: BaseViewController {
 
     var viewModel: LoginViewModel!
 
-    private var usernameObservable: Observable<String> {
-        return usernameTextField.rx.text.throttle(0.5, scheduler: MainScheduler.instance).map { text in
-            guard let text = text else { return "" }
-            return text
-        }
-    }
-
-    private var passwordObservable: Observable<String> {
-        return passwordTextField.rx.text.throttle(0.5, scheduler: MainScheduler.instance).map { text in
-            guard let text = text else { return "" }
-            return text
-        }
-    }
-
-    private var loginButtonObservable: Observable<Void> {
-        return loginButton.rx.tap.asObservable()
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateView()
+    }
+
+    func updateView() {
         setupModelView()
         setupObservable()
     }
 
     private func setupObservable() {
+        guard let viewModel = viewModel else { return }
         viewModel.loginObservable.bind { user, error in
             // TODO: - add logic for login
             if let error = error {
                 print(error.localizedDescription)
             } else {
+                // call login
                 print(user?.name ?? "")
             }
         }.addDisposableTo(disposeBag)
+
         viewModel.loginEnabled.bind { [weak self] valid in
             guard let this = self else { return }
             this.loginButton.isEnabled = valid
@@ -59,8 +49,8 @@ class LoginViewController: BaseViewController {
     }
 
     private func setupModelView() {
-        viewModel = LoginViewModel(input: (userName: usernameObservable,
-                                           pw: passwordObservable,
-                                           loginTap: loginButtonObservable) )
+        viewModel = LoginViewModel(input: (userName: usernameTextField.rx.text.orEmpty,
+                                           pw: passwordTextField.rx.text.orEmpty,
+                                           loginTap: loginButton.rx.tap.asObservable()))
     }
 }

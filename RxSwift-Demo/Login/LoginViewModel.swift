@@ -9,6 +9,7 @@
 import Foundation
 import MVVM
 import RxSwift
+import RxCocoa
 
 class User {
     var name: String = ""
@@ -27,7 +28,7 @@ private struct Validation {
 
 class LoginViewModel: MVVM.ViewModel {
 
-    typealias LoginViewModelParams = (userName: Observable<String>, pw: Observable<String>, loginTap: Observable<Void>)
+    typealias LoginViewModelParams = (userName: ControlProperty<String>, pw: ControlProperty<String>, loginTap: Observable<Void>)
 
     let validatedEmail: Observable<Bool>
     let validatedPassword: Observable<Bool>
