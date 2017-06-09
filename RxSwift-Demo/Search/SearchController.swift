@@ -16,17 +16,14 @@ class SearchController: BaseViewController {
 
     var data: [String] = []
     var dataSearch: [String] = []
-    var dispose = DisposeBag() // Bag of disposables to release them when view is being deallocated
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.dataSource = self
-        tableView.tableFooterView = UIView()
-        config()
+        setupData()
         configRx()
     }
 
-    private func config() {
+    private func setupData() {
         data.removeAll()
         dataSearch.removeAll()
         for i in 0 ... 30 {
@@ -38,20 +35,19 @@ class SearchController: BaseViewController {
 
     // MARK: - Rx
     private func configRx() {
-        searchBar.rx.text // Observable property
-            .orEmpty
-            .distinctUntilChanged() // If didn't occur, check if the new value is the same as old.
-            .subscribe(onNext: {[weak self] (text) in // Here subscribe to every new value
-                guard let this = self else { return }
-                this.dataSearch = this.data.filter({ (str) -> Bool in
-                    str.lowercased().contains(text.lowercased())
-                })
-                if this.dataSearch.isEmpty && text.isEmpty {
-                    this.dataSearch = this.data
-                }
-                this.tableView.reloadData()
-            }, onError: nil, onCompleted: nil, onDisposed: nil)
-        .disposed(by: dispose) // dispose it on deinit.
+        searchBar.rx.text.orEmpty // Observable property
+        .distinctUntilChanged() // If didn't occur, check if the new value is the same as old.
+        .subscribe(onNext: { [weak self] (text) in // Here subscribe to every new value
+            guard let this = self else { return }
+            this.dataSearch = this.data.filter({ (str) -> Bool in
+                str.lowercased().contains(text.lowercased())
+            })
+            if this.dataSearch.isEmpty && text.isEmpty {
+                this.dataSearch = this.data
+            }
+            this.tableView.reloadData()
+        })
+        .disposed(by: disposeBag) // dispose it on deinit.
     }
 }
 
@@ -61,7 +57,7 @@ extension SearchController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "zCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let item = dataSearch[indexPath.row]
         cell.textLabel?.text = item
         return cell
