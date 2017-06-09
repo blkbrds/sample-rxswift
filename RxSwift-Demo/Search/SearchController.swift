@@ -9,12 +9,13 @@
 import UIKit
 import RxSwift
 
-final class SearchController: BaseViewController {
+final class SearchController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var searchBar: UISearchBar!
 
     var data: [String] = []
     var dataSearch: [String] = []
+    var disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
