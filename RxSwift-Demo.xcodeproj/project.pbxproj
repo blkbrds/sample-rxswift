@@ -24,6 +24,9 @@
 		D4F6363C1EE6B50300DFF4F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F636371EE6B50300DFF4F4 /* ViewController.swift */; };
 		D4F6363F1EE6C11D00DFF4F4 /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F6363E1EE6C11D00DFF4F4 /* CalculatorTests.swift */; };
 		D4F636421EE7938B00DFF4F4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F636411EE7938B00DFF4F4 /* BaseViewController.swift */; };
+		D4F636561EEE35C300DFF4F4 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4F636531EEE35C300DFF4F4 /* Login.storyboard */; };
+		D4F636571EEE35C300DFF4F4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F636541EEE35C300DFF4F4 /* LoginViewController.swift */; };
+		D4F636581EEE35C300DFF4F4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F636551EEE35C300DFF4F4 /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		D4F636371EE6B50300DFF4F4 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D4F6363E1EE6C11D00DFF4F4 /* CalculatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorTests.swift; sourceTree = "<group>"; };
 		D4F636411EE7938B00DFF4F4 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		D4F636531EEE35C300DFF4F4 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		D4F636541EEE35C300DFF4F4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D4F636551EEE35C300DFF4F4 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		FBF947A6E9B4F6DE583B3973 /* Pods-RxSwift-DemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwift-DemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwift-DemoTests/Pods-RxSwift-DemoTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,6 +129,7 @@
 		D4F636101EE6B43400DFF4F4 /* RxSwift-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				D4F636521EEE35C300DFF4F4 /* Login */,
 				9758995D1EE8FFCE004AF189 /* Search */,
 				D4F636311EE6B50300DFF4F4 /* Calculator */,
 				D4F636341EE6B50300DFF4F4 /* ExamplesController.swift */,
@@ -162,6 +169,16 @@
 				D4F636371EE6B50300DFF4F4 /* ViewController.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		D4F636521EEE35C300DFF4F4 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D4F636531EEE35C300DFF4F4 /* Login.storyboard */,
+				D4F636541EEE35C300DFF4F4 /* LoginViewController.swift */,
+				D4F636551EEE35C300DFF4F4 /* LoginViewModel.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		F8F94858CBD84834927C9964 /* Pods */ = {
@@ -268,6 +285,7 @@
 			files = (
 				D4F6361C1EE6B43400DFF4F4 /* LaunchScreen.storyboard in Resources */,
 				D4F636191EE6B43400DFF4F4 /* Assets.xcassets in Resources */,
+				D4F636561EEE35C300DFF4F4 /* Login.storyboard in Resources */,
 				D4F636381EE6B50300DFF4F4 /* Calculator.storyboard in Resources */,
 				D4F636171EE6B43400DFF4F4 /* Main.storyboard in Resources */,
 				9758995F1EE8FFE6004AF189 /* Search.storyboard in Resources */,
@@ -400,9 +418,11 @@
 				D4F6363B1EE6B50300DFF4F4 /* Storyboard.swift in Sources */,
 				D4F636121EE6B43400DFF4F4 /* AppDelegate.swift in Sources */,
 				975899621EE900DC004AF189 /* SearchController.swift in Sources */,
+				D4F636571EEE35C300DFF4F4 /* LoginViewController.swift in Sources */,
 				D4F636391EE6B50300DFF4F4 /* CalculatorController.swift in Sources */,
 				D4F6363A1EE6B50300DFF4F4 /* ExamplesController.swift in Sources */,
 				D4F636421EE7938B00DFF4F4 /* BaseViewController.swift in Sources */,
+				D4F636581EEE35C300DFF4F4 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

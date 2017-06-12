@@ -12,15 +12,17 @@ class ExamplesController: UITableViewController {
 
     enum Demo: Int {
         case calculator = 0
+        case validate
         case search = 2
 
         static var numberExamples: Int {
-            return 1
+            return 2
         }
 
         var storyboard: String {
             switch self {
             case .calculator: return "Calculator"
+            case .validate: return "Login"
             case .search: return "Search"
             }
         }
@@ -51,6 +53,9 @@ class ExamplesController: UITableViewController {
         switch demo {
         case .calculator:
             let controller: CalculatorController = storyboard.instantiateViewController()
+            navigationController?.pushViewController(controller, animated: true)
+        case .validate:
+            let controller: LoginViewController = storyboard.instantiateViewController()
             navigationController?.pushViewController(controller, animated: true)
         case .search:
             let controller: SearchController = storyboard.instantiateViewController()
