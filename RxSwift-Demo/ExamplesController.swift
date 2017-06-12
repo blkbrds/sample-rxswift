@@ -12,6 +12,7 @@ class ExamplesController: UITableViewController {
 
     enum Demo: Int {
         case calculator = 0
+        case search = 2
 
         static var numberExamples: Int {
             return 1
@@ -20,12 +21,13 @@ class ExamplesController: UITableViewController {
         var storyboard: String {
             switch self {
             case .calculator: return "Calculator"
+            case .search: return "Search"
             }
         }
     }
 
     // TODO: examples implement
-    var examples: [String] = ["Calculator", "Validation", "MVVM - Demo", "MVVM - GitHub Search Repos"]
+    var examples: [String] = ["Calculator", "Validation", "Search", "MVVM - Demo", "MVVM - GitHub Search Repos"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +51,9 @@ class ExamplesController: UITableViewController {
         switch demo {
         case .calculator:
             let controller: CalculatorController = storyboard.instantiateViewController()
+            navigationController?.pushViewController(controller, animated: true)
+        case .search:
+            let controller: SearchController = storyboard.instantiateViewController()
             navigationController?.pushViewController(controller, animated: true)
         }
     }
