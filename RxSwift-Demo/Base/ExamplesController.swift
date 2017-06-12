@@ -13,17 +13,15 @@ class ExamplesController: UITableViewController {
     enum Demo: Int {
         case calculator = 0
         case validate
-        case search = 2
-
-        static var numberExamples: Int {
-            return 2
-        }
+        case search
+        case mvvmDemo
 
         var storyboard: String {
             switch self {
             case .calculator: return "Calculator"
             case .validate: return "Login"
             case .search: return "Search"
+            case .mvvmDemo: return "ListCar"
             }
         }
     }
@@ -48,7 +46,7 @@ class ExamplesController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let demo = Demo(rawValue: indexPath.row) else { fatalError() }
+        guard let demo = Demo(rawValue: indexPath.row) else { return }
         let storyboard = UIStoryboard(name: demo.storyboard, bundle: nil)
         switch demo {
         case .calculator:
@@ -59,6 +57,9 @@ class ExamplesController: UITableViewController {
             navigationController?.pushViewController(controller, animated: true)
         case .search:
             let controller: SearchController = storyboard.instantiateViewController()
+            navigationController?.pushViewController(controller, animated: true)
+        case .mvvmDemo:
+            let controller: CarController = storyboard.instantiateViewController()
             navigationController?.pushViewController(controller, animated: true)
         }
     }
