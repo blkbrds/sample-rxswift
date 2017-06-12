@@ -12,20 +12,22 @@ class ExamplesController: UITableViewController {
 
     enum Demo: Int {
         case calculator = 0
-        case validation
+        case validate
+        case search
         case mvvmDemo
 
         var storyboard: String {
             switch self {
             case .calculator: return "Calculator"
-            case .validation: return "Validation"
+            case .validate: return "Login"
+            case .search: return "Search"
             case .mvvmDemo: return "ListCar"
             }
         }
     }
 
     // TODO: examples implement
-    var examples: [String] = ["Calculator", "Validation", "MVVM - Demo", "MVVM - GitHub Search Repos"]
+    var examples: [String] = ["Calculator", "Validation", "Search", "MVVM - Demo", "MVVM - GitHub Search Repos"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,8 +52,12 @@ class ExamplesController: UITableViewController {
         case .calculator:
             let controller: CalculatorController = storyboard.instantiateViewController()
             navigationController?.pushViewController(controller, animated: true)
-        case .validation:
-            return
+        case .validate:
+            let controller: LoginViewController = storyboard.instantiateViewController()
+            navigationController?.pushViewController(controller, animated: true)
+        case .search:
+            let controller: SearchController = storyboard.instantiateViewController()
+            navigationController?.pushViewController(controller, animated: true)
         case .mvvmDemo:
             let controller: CarController = storyboard.instantiateViewController()
             navigationController?.pushViewController(controller, animated: true)
