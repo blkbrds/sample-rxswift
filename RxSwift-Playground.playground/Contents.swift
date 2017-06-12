@@ -3,8 +3,12 @@
 import UIKit
 import RxSwift
 
-// Observables are the heart of Rx. You’re going to spend some time discussing what observables are, how to create them, and how to use them.
-// You’ll see “observable,” “observable sequence,” and “sequence” used interchangeably in Rx. And really, they’re all the same thing. You may even see an occasional “stream” thrown around from time to time, especially from developers that come to RxSwift from a different reactive programming environment. “Stream” also refers to the same thing, but in RxSwift, all the cool kids call it a sequence, not a stream. :]
+/*: Introduction
+# What is Observables
+Observables are the heart of Rx. You’re going to spend some time discussing what observables are, how to create them, and how to use them.
+You’ll see “observable,” “observable sequence,” and “sequence” used interchangeably in Rx. And really, they’re all the same thing. You may even see an occasional “stream” thrown around from time to time, especially from developers that come to RxSwift from a different reactive programming environment. “Stream” also refers to the same thing, but in RxSwift, all the cool kids call it a sequence, not a stream. :]
+*/
+
 // Create Observable
 example(of: "just, of, from") {
     // 1
@@ -28,7 +32,7 @@ example(of: "subscribe") {
     let two = 2
     let three = 3
     let observable = Observable.of(one, two, three)
-    // Print each event emitted by the observable .onNext(value), .onCompleted, .onError(error)
+    /*: Print each event emitted by the observable .onNext(value), .onCompleted, .onError(error) */
     observable.subscribe { event in
         print(event)
     }
