@@ -18,6 +18,6 @@ xcodebuild test \
     -destination "$DESTINATION" \
     -derivedDataPath build \
     ONLY_ACTIVE_ARCH=YES \
-    -configuration "$CONFIGURATION"
+    -configuration "$CONFIGURATION" | bundle exec xcpretty;
 
 exit "${PIPESTATUS[0]}"

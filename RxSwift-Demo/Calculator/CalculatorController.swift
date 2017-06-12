@@ -52,7 +52,7 @@ class CalculatorController: BaseViewController {
         // receive events tap button
         taps.subscribe(onNext: { [weak self] math in
             guard let this = self else { return }
-            let selectedColor = #colorLiteral(red: 1, green: 0.5781051517, blue: 0, alpha: 1)
+            let selectedColor = #colorLiteral(red: 1, green: 0.5764705882, blue: 0, alpha: 1)
             this.plusButton.backgroundColor = (math == .plus ? selectedColor : UIColor.lightGray)
             this.subButton.backgroundColor = (math == .sub ? selectedColor : UIColor.lightGray)
             this.multiButton.backgroundColor = (math == .multi ? selectedColor : UIColor.lightGray)
