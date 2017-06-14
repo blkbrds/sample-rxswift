@@ -11,6 +11,8 @@ import RxSwift
 import RxCocoa
 import Kingfisher
 
+// https://www.raywenderlich.com/158364/rxswift-transforming-operators-practice
+
 class FetchDataNetworkController: UITableViewController {
 
     fileprivate let disposeBag = DisposeBag()
@@ -19,7 +21,7 @@ class FetchDataNetworkController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // reload tableView when list events changes
+        // reload tableView when list events ([Event]) changes
         eventService.events.asObservable()
             .subscribe(onNext: { [weak self] (_) in
                 guard let this = self else { return }

@@ -21,19 +21,20 @@ final class EventService {
 
         RxApi.requestGet(url: url)
             .filter { objects in
-                return !objects.isEmpty
+                return !objects.isEmpty // filter out any responses that do not contain any event objects
             }
             .map { objects in
-                return objects.flatMap(Event.init)
+                return objects.flatMap(Event.init) // parse [JObject] to [Event] and returns an array of Event objects (non-optional)
             }
             .subscribe(onNext: { [weak self](events) in
                 guard let this = self else { return }
-                this.processEvents(events)
+                this.processEvents(events) // save and update objects (Event object) recevied
             })
             .addDisposableTo(disposeBag)
     }
 
     func processEvents(_ newEvents: [Event]) {
+        // grab the last 50 events from the repository’s event list
         var updatedEvents = newEvents + events.value
         if updatedEvents.count > 50 {
             updatedEvents = [Event](updatedEvents.prefix(upTo: 50))
