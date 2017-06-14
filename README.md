@@ -3,14 +3,14 @@
 * **RxSwift**: ```Reactive Programming in Swift```, which is a part of the Functional Reactive Programming (FRP) design pattern — where views react to changes to data. **FRP** is not **MVC**. 
 ``` 
  Reactive Programming, which focuses on asynchronous data streams, which you can listen to and react 
- accordingly. To learn more, check out this great introduction.
+ accordingly.
 ```
 ```
  Functional Programming, which emphasizes calculations via mathematical-style functions, immutability 
  and expressiveness, and minimizes the use of variables and state.
 ```
 * **RxSwift** is a library for composing asynchronous and event-based code by using observable sequences and functional style operators, allowing for parameterized execution via schedulers.
-* **RxSwift** in its essence, simplifies developing asynchronous programs by allowing your code to react to new data and process it in sequential, isolated manner.
+* **RxSwift** in its essence, simplifies ```developing asynchronous programs by allowing your code to react to new data and process it in sequential, isolated manner```.
 
 ## Usage
 * Bindings
