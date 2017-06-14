@@ -81,6 +81,7 @@ Run ```./scripts/install``` in scripts folder to setup and install pod.
 * Search bar
 * Fetch Data from Server
 * MVVM with RxSwift
+
 ## References
 * [Github RxSwift](https://github.com/ReactiveX/RxSwift)
 * [RxSwift Getting Started](https://github.com/ReactiveX/RxSwift/blob/master/Documentation/GettingStarted.md)
