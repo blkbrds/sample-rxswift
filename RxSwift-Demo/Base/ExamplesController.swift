@@ -14,6 +14,7 @@ class ExamplesController: UITableViewController {
         case calculator = 0
         case validate
         case search
+        case fetchDataNetwork
         case mvvmDemo
 
         var storyboard: String {
@@ -21,13 +22,14 @@ class ExamplesController: UITableViewController {
             case .calculator: return "Calculator"
             case .validate: return "Login"
             case .search: return "Search"
+            case .fetchDataNetwork: return "FetchDataNetwork"
             case .mvvmDemo: return "ListCar"
             }
         }
     }
 
     // TODO: examples implement
-    var examples: [String] = ["Calculator", "Validation", "Search", "MVVM - Demo", "MVVM - GitHub Search Repos"]
+    var examples: [String] = ["Calculator", "Validation", "Search", "Fetching Data From the Web", "MVVM - Demo", "MVVM - GitHub Search Repos"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +59,9 @@ class ExamplesController: UITableViewController {
             navigationController?.pushViewController(controller, animated: true)
         case .search:
             let controller: SearchController = storyboard.instantiateViewController()
+            navigationController?.pushViewController(controller, animated: true)
+        case .fetchDataNetwork:
+            let controller: FetchDataNetworkController = storyboard.instantiateViewController()
             navigationController?.pushViewController(controller, animated: true)
         case .mvvmDemo:
             let controller: CarController = storyboard.instantiateViewController()
