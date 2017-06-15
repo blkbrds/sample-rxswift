@@ -21,7 +21,7 @@ excluded:
   - Carthage
   - Pods
   - vendor
-  - playgrounds
+  - Documentation
 cyclomatic_complexity:
   warning: 15
 line_length: 200
