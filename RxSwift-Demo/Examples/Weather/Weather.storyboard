@@ -48,11 +48,19 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="icon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YMy-Us-PWy">
+                                <rect key="frame" x="40" y="307" width="45.5" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="YMy-Us-PWy" firstAttribute="leading" secondItem="dI7-0F-RgY" secondAttribute="leading" id="3ng-OK-0s5"/>
                             <constraint firstItem="ZTA-h1-bKV" firstAttribute="top" secondItem="dI7-0F-RgY" secondAttribute="bottom" constant="20" id="JH8-Zi-ffB"/>
                             <constraint firstItem="dI7-0F-RgY" firstAttribute="top" secondItem="94u-Fb-EiT" secondAttribute="bottom" constant="80" id="Ks1-QA-Qoe"/>
+                            <constraint firstItem="YMy-Us-PWy" firstAttribute="top" secondItem="7dt-rg-KVF" secondAttribute="bottom" constant="20" id="Pfg-oi-FT7"/>
                             <constraint firstItem="ZTA-h1-bKV" firstAttribute="leading" secondItem="dI7-0F-RgY" secondAttribute="leading" id="RYu-DY-hiU"/>
                             <constraint firstAttribute="trailing" secondItem="dI7-0F-RgY" secondAttribute="trailing" constant="40" id="ZXg-c3-Dhu"/>
                             <constraint firstItem="KjK-Ha-IIW" firstAttribute="leading" secondItem="dI7-0F-RgY" secondAttribute="leading" id="iXm-hf-NGV"/>
@@ -64,6 +72,7 @@
                     </view>
                     <connections>
                         <outlet property="humidityLabel" destination="KjK-Ha-IIW" id="HP8-gG-BkO"/>
+                        <outlet property="iconLabel" destination="YMy-Us-PWy" id="KGp-pd-uK1"/>
                         <outlet property="nameCityLabel" destination="7dt-rg-KVF" id="vHl-y8-oOT"/>
                         <outlet property="searchCityTextField" destination="dI7-0F-RgY" id="om2-uA-KDJ"/>
                         <outlet property="temperatureLabel" destination="ZTA-h1-bKV" id="zce-RK-1qf"/>

@@ -13,18 +13,39 @@ import MVVM
 
 class WeatherViewController: UIViewController {
 
-    var viewModel: WeatherViewModel!
     var disposeBag = DisposeBag()
 
     @IBOutlet private var searchCityTextField: UITextField!
     @IBOutlet private var nameCityLabel: UILabel!
     @IBOutlet private var temperatureLabel: UILabel!
     @IBOutlet private var humidityLabel: UILabel!
+    @IBOutlet private var iconLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        ApiController
+        WeatherViewModel.shared.abc(city: "London")
 
+        searchCityTextField.rx.text
+        .filter { ($0 ?? "").isNotEmpty } // characters.count > 0
+        .flatMap { text in
+            return WeatherViewModel.shared.currentWeather(city: text ?? "Error")
+        }
+        .observeOn(MainScheduler.instance)
+        .subscribe(onNext: { [weak self] (data) in
+            guard let this = self else { return }
+            // Show data in here
+            this.temperatureLabel.text = "\(data.temperature)° C"
+            this.iconLabel.text = data.icon
+            this.humidityLabel.text = "\(data.humidity)%"
+            this.nameCityLabel.text = data.cityName
+        })
+        .addDisposableTo(disposeBag)
+    }
+}
+
+extension String {
+    var isNotEmpty: Bool {
+        return !isEmpty
     }
 }
