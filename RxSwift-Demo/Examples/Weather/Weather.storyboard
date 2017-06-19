@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -21,16 +21,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WeatherViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMe-pr-7LU">
-                                <rect key="frame" x="110" y="223" width="177" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City's name" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dI7-0F-RgY">
+                                <rect key="frame" x="40" y="100" width="295" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="JBn-hD-HnP"/>
+                                </constraints>
                                 <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0° C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTA-h1-bKV">
+                                <rect key="frame" x="40" y="160" width="47" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KjK-Ha-IIW">
+                                <rect key="frame" x="40" y="209" width="33" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City's name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dt-rg-KVF">
+                                <rect key="frame" x="40" y="258" width="126" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZTA-h1-bKV" firstAttribute="top" secondItem="dI7-0F-RgY" secondAttribute="bottom" constant="20" id="JH8-Zi-ffB"/>
+                            <constraint firstItem="dI7-0F-RgY" firstAttribute="top" secondItem="94u-Fb-EiT" secondAttribute="bottom" constant="80" id="Ks1-QA-Qoe"/>
+                            <constraint firstItem="ZTA-h1-bKV" firstAttribute="leading" secondItem="dI7-0F-RgY" secondAttribute="leading" id="RYu-DY-hiU"/>
+                            <constraint firstAttribute="trailing" secondItem="dI7-0F-RgY" secondAttribute="trailing" constant="40" id="ZXg-c3-Dhu"/>
+                            <constraint firstItem="KjK-Ha-IIW" firstAttribute="leading" secondItem="dI7-0F-RgY" secondAttribute="leading" id="iXm-hf-NGV"/>
+                            <constraint firstItem="KjK-Ha-IIW" firstAttribute="top" secondItem="ZTA-h1-bKV" secondAttribute="bottom" constant="20" id="iyi-Xq-v4y"/>
+                            <constraint firstItem="7dt-rg-KVF" firstAttribute="leading" secondItem="dI7-0F-RgY" secondAttribute="leading" id="oqW-gt-OLm"/>
+                            <constraint firstItem="dI7-0F-RgY" firstAttribute="leading" secondItem="NQe-Wj-ozZ" secondAttribute="leading" constant="40" id="u4g-7q-JZr"/>
+                            <constraint firstItem="7dt-rg-KVF" firstAttribute="top" secondItem="KjK-Ha-IIW" secondAttribute="bottom" constant="20" id="x1a-da-HTT"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="humidityLabel" destination="KjK-Ha-IIW" id="HP8-gG-BkO"/>
+                        <outlet property="nameCityLabel" destination="7dt-rg-KVF" id="vHl-y8-oOT"/>
+                        <outlet property="searchCityTextField" destination="dI7-0F-RgY" id="om2-uA-KDJ"/>
+                        <outlet property="temperatureLabel" destination="ZTA-h1-bKV" id="zce-RK-1qf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YZJ-pq-JpC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

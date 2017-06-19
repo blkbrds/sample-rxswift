@@ -24,15 +24,7 @@ class WeatherViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        searchCityTextField.rx.ta
+//        ApiController
 
-        viewModel.currentWeather(city: "yeah")
-        .observeOn(MainScheduler.instance)
-        .subscribe(onNext: { [weak self] data in
-            guard let this = self else { return }
-            print(this)
-            print(data)
-        })
-        .addDisposableTo(disposeBag)
     }
 }
