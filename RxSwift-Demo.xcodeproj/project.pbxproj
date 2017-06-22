@@ -32,6 +32,10 @@
 		D4148BAD1EEF876100BD6C3F /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4148BAC1EEF876100BD6C3F /* Event.swift */; };
 		D4148BAF1EEF960E00BD6C3F /* EventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4148BAE1EEF960E00BD6C3F /* EventService.swift */; };
 		D4148BB11EEFC53E00BD6C3F /* RxApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4148BB01EEFC53E00BD6C3F /* RxApi.swift */; };
+		D4ECF99E1EFA15B500FFBF4D /* MultipleCellTypes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4ECF99D1EFA15B500FFBF4D /* MultipleCellTypes.storyboard */; };
+		D4ECF9A01EFA1BE000FFBF4D /* MultipleCellTypesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ECF99F1EFA1BE000FFBF4D /* MultipleCellTypesController.swift */; };
+		D4ECF9A21EFA1D9700FFBF4D /* TextCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ECF9A11EFA1D9700FFBF4D /* TextCollectionViewCell.swift */; };
+		D4ECF9A41EFA1DA900FFBF4D /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ECF9A31EFA1DA900FFBF4D /* PhotoCollectionViewCell.swift */; };
 		D4F636191EE6B43400DFF4F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4F636181EE6B43400DFF4F4 /* Assets.xcassets */; };
 		D4F6363B1EE6B50300DFF4F4 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F636361EE6B50300DFF4F4 /* Storyboard.swift */; };
 		D4F6363C1EE6B50300DFF4F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F636371EE6B50300DFF4F4 /* ViewController.swift */; };
@@ -78,6 +82,10 @@
 		D4148BAE1EEF960E00BD6C3F /* EventService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventService.swift; sourceTree = "<group>"; };
 		D4148BB01EEFC53E00BD6C3F /* RxApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxApi.swift; sourceTree = "<group>"; };
 		D449C1F92858282EE5E68961 /* Pods-RxSwift-DemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwift-DemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwift-DemoTests/Pods-RxSwift-DemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D4ECF99D1EFA15B500FFBF4D /* MultipleCellTypes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MultipleCellTypes.storyboard; sourceTree = "<group>"; };
+		D4ECF99F1EFA1BE000FFBF4D /* MultipleCellTypesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleCellTypesController.swift; sourceTree = "<group>"; };
+		D4ECF9A11EFA1D9700FFBF4D /* TextCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextCollectionViewCell.swift; sourceTree = "<group>"; };
+		D4ECF9A31EFA1DA900FFBF4D /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		D4F6360E1EE6B43400DFF4F4 /* RxSwift-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RxSwift-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4F636181EE6B43400DFF4F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4F6361D1EE6B43400DFF4F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -143,6 +151,7 @@
 		D4148B871EEE3B8200BD6C3F /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				D4ECF99C1EFA158800FFBF4D /* MultipleCellTypes */,
 				D4148BA71EEF856400BD6C3F /* FetchDataNetwork */,
 				D4148B881EEE3B8200BD6C3F /* Calculator */,
 				D4148B8B1EEE3B8200BD6C3F /* Login */,
@@ -203,6 +212,17 @@
 				D4148BB01EEFC53E00BD6C3F /* RxApi.swift */,
 			);
 			path = FetchDataNetwork;
+			sourceTree = "<group>";
+		};
+		D4ECF99C1EFA158800FFBF4D /* MultipleCellTypes */ = {
+			isa = PBXGroup;
+			children = (
+				D4ECF99D1EFA15B500FFBF4D /* MultipleCellTypes.storyboard */,
+				D4ECF99F1EFA1BE000FFBF4D /* MultipleCellTypesController.swift */,
+				D4ECF9A11EFA1D9700FFBF4D /* TextCollectionViewCell.swift */,
+				D4ECF9A31EFA1DA900FFBF4D /* PhotoCollectionViewCell.swift */,
+			);
+			path = MultipleCellTypes;
 			sourceTree = "<group>";
 		};
 		D4F636051EE6B43400DFF4F4 = {
@@ -353,6 +373,7 @@
 				D4148B9B1EEE3B8200BD6C3F /* Login.storyboard in Resources */,
 				D4148BA41EEE3B8200BD6C3F /* Search.storyboard in Resources */,
 				D4148B851EEE3AF100BD6C3F /* LaunchScreen.storyboard in Resources */,
+				D4ECF99E1EFA15B500FFBF4D /* MultipleCellTypes.storyboard in Resources */,
 				D4148BA31EEE3B8200BD6C3F /* ListCar.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -489,13 +510,16 @@
 				D4148B9D1EEE3B8200BD6C3F /* LoginViewModel.swift in Sources */,
 				D4148BAD1EEF876100BD6C3F /* Event.swift in Sources */,
 				D4148BA21EEE3B8200BD6C3F /* CarViewModel.swift in Sources */,
+				D4ECF9A41EFA1DA900FFBF4D /* PhotoCollectionViewCell.swift in Sources */,
 				D4148B9E1EEE3B8200BD6C3F /* Car.swift in Sources */,
 				D4148BB11EEFC53E00BD6C3F /* RxApi.swift in Sources */,
 				D4148B9F1EEE3B8200BD6C3F /* CarController.swift in Sources */,
 				D4148BA01EEE3B8200BD6C3F /* CarListViewModel.swift in Sources */,
+				D4ECF9A21EFA1D9700FFBF4D /* TextCollectionViewCell.swift in Sources */,
 				D4F6363C1EE6B50300DFF4F4 /* ViewController.swift in Sources */,
 				D4F6363B1EE6B50300DFF4F4 /* Storyboard.swift in Sources */,
 				D4148B821EEE3A1B00BD6C3F /* ExamplesController.swift in Sources */,
+				D4ECF9A01EFA1BE000FFBF4D /* MultipleCellTypesController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

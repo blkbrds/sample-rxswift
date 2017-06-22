@@ -14,6 +14,7 @@ class ExamplesController: UITableViewController {
         case calculator = 0
         case validate
         case search
+        case MultipleCellTypes
         case fetchDataNetwork
         case mvvmDemo
 
@@ -22,6 +23,7 @@ class ExamplesController: UITableViewController {
             case .calculator: return "Calculator"
             case .validate: return "Login"
             case .search: return "Search"
+            case .MultipleCellTypes: return "MultipleCellTypes"
             case .fetchDataNetwork: return "FetchDataNetwork"
             case .mvvmDemo: return "ListCar"
             }
@@ -29,10 +31,34 @@ class ExamplesController: UITableViewController {
     }
 
     // TODO: examples implement
-    var examples: [String] = ["Calculator", "Validation", "Search", "Fetching Data From the Web", "MVVM - Demo", "MVVM - GitHub Search Repos"]
+    var examples: [String] = ["Calculator", "Validation", "Search", "Multiple Cell Custom Types", "Fetching Data From the Web", "MVVM - Demo", "MVVM - GitHub Search Repos"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+
+    func controllerExampleFor(demo: Demo) -> UIViewController {
+        let storyboard = UIStoryboard(name: demo.storyboard, bundle: nil)
+        switch demo {
+        case .calculator:
+            let controller: CalculatorController = storyboard.instantiateViewController()
+            return controller
+        case .validate:
+            let controller: LoginViewController = storyboard.instantiateViewController()
+            return controller
+        case .search:
+            let controller: SearchController = storyboard.instantiateViewController()
+            return controller
+        case .MultipleCellTypes:
+            let controller: MultipleCellTypesController = storyboard.instantiateViewController()
+            return controller
+        case .fetchDataNetwork:
+            let controller: FetchDataNetworkController = storyboard.instantiateViewController()
+            return controller
+        case .mvvmDemo:
+            let controller: CarController = storyboard.instantiateViewController()
+            return controller
+        }
     }
 
     // MARK: - Table view data source
@@ -49,23 +75,7 @@ class ExamplesController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let demo = Demo(rawValue: indexPath.row) else { return }
-        let storyboard = UIStoryboard(name: demo.storyboard, bundle: nil)
-        switch demo {
-        case .calculator:
-            let controller: CalculatorController = storyboard.instantiateViewController()
-            navigationController?.pushViewController(controller, animated: true)
-        case .validate:
-            let controller: LoginViewController = storyboard.instantiateViewController()
-            navigationController?.pushViewController(controller, animated: true)
-        case .search:
-            let controller: SearchController = storyboard.instantiateViewController()
-            navigationController?.pushViewController(controller, animated: true)
-        case .fetchDataNetwork:
-            let controller: FetchDataNetworkController = storyboard.instantiateViewController()
-            navigationController?.pushViewController(controller, animated: true)
-        case .mvvmDemo:
-            let controller: CarController = storyboard.instantiateViewController()
-            navigationController?.pushViewController(controller, animated: true)
-        }
+        let controller = controllerExampleFor(demo: demo)
+        navigationController?.pushViewController(controller, animated: true)
     }
 }
