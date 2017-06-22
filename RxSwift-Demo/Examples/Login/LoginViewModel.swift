@@ -22,7 +22,7 @@ class User {
 }
 
 struct Validation {
-    static let minimumPasswordLength = 6
+    static let minimumPasswordLength = 5
     static let minimumUserNameLength = 5
 }
 
@@ -33,7 +33,7 @@ class LoginViewModel: MVVM.ViewModel {
     let validatedUserName: Observable<Bool>
     let validatedPassword: Observable<Bool>
     let loginEnabled: Observable<Bool>
-    let loginObservable: Observable<(User?, Error?)>
+    let loginObservable: Observable<(User, Error?)>
 
     init(input: LoginViewModelParams) {
 

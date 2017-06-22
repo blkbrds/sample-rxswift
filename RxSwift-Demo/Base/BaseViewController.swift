@@ -33,4 +33,10 @@ class BaseViewController: UIViewController {
             }
         #endif
     }
+
+    func showAlert(message: String) {
+        let alert = UIAlertController(title: "RxSwift-Demo", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
 }
