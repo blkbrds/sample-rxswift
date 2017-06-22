@@ -29,7 +29,7 @@ class ExamplesController: UITableViewController {
     }
 
     // TODO: examples implement
-    var examples: [String] = ["Calculator", "Validation", "Search", "Fetching Data From the Web", "MVVM - Demo", "MVVM - GitHub Search Repos"]
+    var examples: [String] = ["Calculator", "Login", "Search", "Fetching Data From the Web", "MVVM - Demo", "MVVM - GitHub Search Repos"]
 
     override func viewDidLoad() {
         super.viewDidLoad()

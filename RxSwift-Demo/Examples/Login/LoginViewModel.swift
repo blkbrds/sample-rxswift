@@ -21,8 +21,8 @@ class User {
     }
 }
 
-private struct Validation {
-    static let minimumPasswordLength = 4
+struct Validation {
+    static let minimumPasswordLength = 6
     static let minimumUserNameLength = 5
 }
 
@@ -30,14 +30,14 @@ class LoginViewModel: MVVM.ViewModel {
 
     typealias LoginViewModelParams = (userName: ControlProperty<String>, pw: ControlProperty<String>, loginTap: Observable<Void>)
 
-    let validatedEmail: Observable<Bool>
+    let validatedUserName: Observable<Bool>
     let validatedPassword: Observable<Bool>
     let loginEnabled: Observable<Bool>
     let loginObservable: Observable<(User?, Error?)>
 
     init(input: LoginViewModelParams) {
 
-        validatedEmail = input.userName
+        validatedUserName = input.userName
             .map { $0.characters.count >= Validation.minimumUserNameLength }
             .shareReplay(1)
 
@@ -45,7 +45,7 @@ class LoginViewModel: MVVM.ViewModel {
             .map { $0.characters.count >= Validation.minimumPasswordLength }
             .shareReplay(1)
 
-        loginEnabled = Observable.combineLatest(validatedEmail, validatedPassword) { $0 && $1 }
+        loginEnabled = Observable.combineLatest(validatedUserName, validatedPassword) { $0 && $1 }
 
         let userAndPassword = Observable.combineLatest(input.userName, input.pw) { ($0, $1) }
 

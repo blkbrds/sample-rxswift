@@ -16,12 +16,17 @@ class LoginViewController: BaseViewController, MVVM.View {
     @IBOutlet private weak var usernameTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
     @IBOutlet private weak var loginButton: UIButton!
+    @IBOutlet private weak var validationNameLabel: UILabel!
+    @IBOutlet private weak var validationPasswordLabel: UILabel!
 
     var viewModel: LoginViewModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         updateView()
+
+        validationNameLabel.text = "Username has to be at least \(Validation.minimumUserNameLength) characters"
+        validationPasswordLabel.text = "Password has to be at least \(Validation.minimumPasswordLength) characters"
     }
 
     func updateView() {
@@ -38,13 +43,26 @@ class LoginViewController: BaseViewController, MVVM.View {
                 // call login
                 print(user?.name ?? "")
             }
-        }.addDisposableTo(disposeBag)
+        }.disposed(by: disposeBag)
 
         viewModel.loginEnabled.bind { [weak self] valid in
             guard let this = self else { return }
             this.loginButton.isEnabled = valid
             this.loginButton.alpha = valid ? 1 : 0.5
-        }.addDisposableTo(disposeBag)
+        }.disposed(by: disposeBag)
+
+        viewModel.validatedUserName
+            .bind(to: validationNameLabel.rx.isHidden)
+            .disposed(by: disposeBag)
+
+        viewModel.validatedPassword
+            .bind(to: validationPasswordLabel.rx.isHidden)
+            .disposed(by: disposeBag)
+
+        loginButton.rx.tap.asObservable()
+        .subscribe { (_) in
+            self.showa
+        }
     }
 
     private func setupModelView() {
