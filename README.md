@@ -80,6 +80,7 @@ Run ```./scripts/install``` in scripts folder to setup and install pod.
 * Validate user name and password
 * Search bar
 * Multiple Cell Custom Types
+* Custom Observable
 * Fetch Data from Server
 * MVVM with RxSwift
 
