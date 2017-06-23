@@ -12,7 +12,7 @@ class ExamplesController: UITableViewController {
 
     enum Demo: Int {
         case calculator = 0
-        case login
+        case validateLogin
         case search
         case galleryImage
         case MultipleCellTypes
@@ -22,7 +22,7 @@ class ExamplesController: UITableViewController {
         var storyboard: String {
             switch self {
             case .calculator: return "Calculator"
-            case .login: return "Login"
+            case .validateLogin: return "Login"
             case .search: return "Search"
             case .galleryImage: return "GalleryImage"
             case .MultipleCellTypes: return "MultipleCellTypes"
@@ -33,7 +33,7 @@ class ExamplesController: UITableViewController {
     }
 
     // TODO: examples implement
-    var examples: [String] = ["Calculator", "Login", "Search", "Gallery Image", "Multiple Cell Custom Types", "Fetching Data From the Web", "MVVM - Demo", "MVVM - GitHub Search Repos"]
+    var examples: [String] = ["Calculator", "Validate Login", "Search", "Gallery Image", "Multiple Cell Custom Types", "Fetching Data From the Web", "MVVM - Demo", "MVVM - GitHub Search Repos"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +45,7 @@ class ExamplesController: UITableViewController {
         case .calculator:
             let controller: CalculatorController = storyboard.instantiateViewController()
             return controller
-        case .login:
+        case .validateLogin:
             let controller: LoginViewController = storyboard.instantiateViewController()
             return controller
         case .search:
