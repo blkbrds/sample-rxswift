@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Photos
 
 class ExamplesController: UITableViewController {
 
@@ -37,6 +38,7 @@ class ExamplesController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        PHPhotoLibrary.requestAuthorization { _ in }
     }
 
     func controllerExampleFor(demo: Demo) -> UIViewController {

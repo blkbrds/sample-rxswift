@@ -35,6 +35,7 @@
 		D46EAFC41EFCADC600883000 /* CustomObservable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D46EAFC31EFCADC600883000 /* CustomObservable.storyboard */; };
 		D46EAFC61EFCADFE00883000 /* CustomObservableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46EAFC51EFCADFE00883000 /* CustomObservableController.swift */; };
 		D46EAFC81EFCB18D00883000 /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46EAFC71EFCB18D00883000 /* AlbumViewController.swift */; };
+		D46EAFCA1EFCCD9600883000 /* PhotoWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46EAFC91EFCCD9600883000 /* PhotoWriter.swift */; };
 		D4ECF99E1EFA15B500FFBF4D /* MultipleCellTypes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4ECF99D1EFA15B500FFBF4D /* MultipleCellTypes.storyboard */; };
 		D4ECF9A01EFA1BE000FFBF4D /* MultipleCellTypesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ECF99F1EFA1BE000FFBF4D /* MultipleCellTypesController.swift */; };
 		D4ECF9A21EFA1D9700FFBF4D /* TextCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ECF9A11EFA1D9700FFBF4D /* TextCollectionViewCell.swift */; };
@@ -88,6 +89,7 @@
 		D46EAFC31EFCADC600883000 /* CustomObservable.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CustomObservable.storyboard; sourceTree = "<group>"; };
 		D46EAFC51EFCADFE00883000 /* CustomObservableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomObservableController.swift; sourceTree = "<group>"; };
 		D46EAFC71EFCB18D00883000 /* AlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
+		D46EAFC91EFCCD9600883000 /* PhotoWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoWriter.swift; sourceTree = "<group>"; };
 		D4ECF99D1EFA15B500FFBF4D /* MultipleCellTypes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MultipleCellTypes.storyboard; sourceTree = "<group>"; };
 		D4ECF99F1EFA1BE000FFBF4D /* MultipleCellTypesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleCellTypesController.swift; sourceTree = "<group>"; };
 		D4ECF9A11EFA1D9700FFBF4D /* TextCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				D46EAFC31EFCADC600883000 /* CustomObservable.storyboard */,
 				D46EAFC51EFCADFE00883000 /* CustomObservableController.swift */,
 				D46EAFC71EFCB18D00883000 /* AlbumViewController.swift */,
+				D46EAFC91EFCCD9600883000 /* PhotoWriter.swift */,
 			);
 			path = CustomObservable;
 			sourceTree = "<group>";
@@ -520,6 +523,7 @@
 				D4148B9C1EEE3B8200BD6C3F /* LoginViewController.swift in Sources */,
 				D4148B811EEE3A1B00BD6C3F /* BaseViewController.swift in Sources */,
 				D46EAFC61EFCADFE00883000 /* CustomObservableController.swift in Sources */,
+				D46EAFCA1EFCCD9600883000 /* PhotoWriter.swift in Sources */,
 				D4148BAF1EEF960E00BD6C3F /* EventService.swift in Sources */,
 				D4148BA11EEE3B8200BD6C3F /* CarTableViewCell.swift in Sources */,
 				D4148BA51EEE3B8200BD6C3F /* SearchController.swift in Sources */,

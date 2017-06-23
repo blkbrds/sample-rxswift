@@ -7,29 +7,64 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
-class CustomObservableController: UIViewController {
+class CustomObservableController: BaseViewController {
+
+    @IBOutlet private weak var previewImageView: UIImageView!
+    @IBOutlet private weak var clearButton: UIButton!
+    @IBOutlet private weak var saveButton: UIButton!
+    var photo: UIImage?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        clearButton.rx.tap.asObservable()
+            .subscribe(onNext: { [weak self] (_) in
+                guard let this = self else { return }
+                this.previewImageView.image = nil
+                this.photo = nil
+            })
+            .disposed(by: disposeBag)
+
+        saveButton.rx.tap.asObservable()
+            .subscribe(onNext: { [weak self] (_) in
+                guard let this = self else { return }
+                this.savePhoto()
+
+            })
+            .disposed(by: disposeBag)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    private func savePhoto() {
+        guard let photo = self.photo else {
+            showAlert(message: "Please choose photo to save.")
+            return
+        }
+
+        /*** PhotoWriter is example for Custom Observable ***/
+        PhotoWriter.save(photo)
+            .subscribe(
+                onError: { [weak self] (error) in
+                    guard let this = self else { return }
+                    this.showAlert(message: "error: \(error.localizedDescription)")
+                },
+                onCompleted: { [weak self] in
+                    guard let this = self else { return }
+                    this.showAlert(message: "Saved!")
+                })
+            .disposed(by: disposeBag)
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        guard let albumViewController = segue.destination as? AlbumViewController else { return }
+        albumViewController.selectedImage
+            .subscribe(onNext: { [weak self] (newImage) in
+                guard let this = self else { return }
+                this.photo = newImage
+                this.previewImageView.image = newImage
+            })
+            .disposed(by: disposeBag)
     }
-    */
-
 }
