@@ -12,8 +12,9 @@ class ExamplesController: UITableViewController {
 
     enum Demo: Int {
         case calculator = 0
-        case validate
+        case validateLogin
         case search
+        case galleryImage
         case MultipleCellTypes
         case fetchDataNetwork
         case mvvmDemo
@@ -21,8 +22,9 @@ class ExamplesController: UITableViewController {
         var storyboard: String {
             switch self {
             case .calculator: return "Calculator"
-            case .validate: return "Login"
+            case .validateLogin: return "Login"
             case .search: return "Search"
+            case .galleryImage: return "GalleryImage"
             case .MultipleCellTypes: return "MultipleCellTypes"
             case .fetchDataNetwork: return "FetchDataNetwork"
             case .mvvmDemo: return "ListCar"
@@ -31,7 +33,7 @@ class ExamplesController: UITableViewController {
     }
 
     // TODO: examples implement
-    var examples: [String] = ["Calculator", "Validation", "Search", "Multiple Cell Custom Types", "Fetching Data From the Web", "MVVM - Demo", "MVVM - GitHub Search Repos"]
+    var examples: [String] = ["Calculator", "Validate Login", "Search", "Gallery Image", "Multiple Cell Custom Types", "Fetching Data From the Web", "MVVM - Demo", "MVVM - GitHub Search Repos"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,11 +45,14 @@ class ExamplesController: UITableViewController {
         case .calculator:
             let controller: CalculatorController = storyboard.instantiateViewController()
             return controller
-        case .validate:
+        case .validateLogin:
             let controller: LoginViewController = storyboard.instantiateViewController()
             return controller
         case .search:
             let controller: SearchController = storyboard.instantiateViewController()
+            return controller
+        case .galleryImage:
+            let controller: GalleryImageViewController = storyboard.instantiateViewController()
             return controller
         case .MultipleCellTypes:
             let controller: MultipleCellTypesController = storyboard.instantiateViewController()
