@@ -15,6 +15,7 @@ class ExamplesController: UITableViewController {
         case validate
         case search
         case MultipleCellTypes
+        case CustomObservable
         case fetchDataNetwork
         case mvvmDemo
 
@@ -24,6 +25,7 @@ class ExamplesController: UITableViewController {
             case .validate: return "Login"
             case .search: return "Search"
             case .MultipleCellTypes: return "MultipleCellTypes"
+            case .CustomObservable: return "CustomObservable"
             case .fetchDataNetwork: return "FetchDataNetwork"
             case .mvvmDemo: return "ListCar"
             }
@@ -31,7 +33,7 @@ class ExamplesController: UITableViewController {
     }
 
     // TODO: examples implement
-    var examples: [String] = ["Calculator", "Validation", "Search", "Multiple Cell Custom Types", "Fetching Data From the Web", "MVVM - Demo", "MVVM - GitHub Search Repos"]
+    var examples: [String] = ["Calculator", "Validation", "Search", "Multiple Cell Custom Types", "Custom Observable", "Fetching Data From the Web", "MVVM - Demo", "MVVM - GitHub Search Repos"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +53,9 @@ class ExamplesController: UITableViewController {
             return controller
         case .MultipleCellTypes:
             let controller: MultipleCellTypesController = storyboard.instantiateViewController()
+            return controller
+        case .CustomObservable:
+            let controller: CustomObservableController = storyboard.instantiateViewController()
             return controller
         case .fetchDataNetwork:
             let controller: FetchDataNetworkController = storyboard.instantiateViewController()
