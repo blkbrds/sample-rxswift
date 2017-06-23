@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		57E5C1CF30F6F6B0507E4CFF /* Pods_RxSwift_DemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A7ACE082C1E28806E63EEB1 /* Pods_RxSwift_DemoTests.framework */; };
+		97D205B21EFB8325000C8C68 /* GalleryImage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97D205B11EFB8325000C8C68 /* GalleryImage.storyboard */; };
+		97D205B41EFB8343000C8C68 /* GalleryImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D205B31EFB8343000C8C68 /* GalleryImageViewController.swift */; };
 		9AD1A7530271DF09BE20A748 /* Pods_RxSwift_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A11AEE290E978354AA845CF /* Pods_RxSwift_Demo.framework */; };
 		D4148B801EEE3A1B00BD6C3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4148B7D1EEE3A1B00BD6C3F /* AppDelegate.swift */; };
 		D4148B811EEE3A1B00BD6C3F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4148B7E1EEE3A1B00BD6C3F /* BaseViewController.swift */; };
@@ -32,10 +34,10 @@
 		D4148BAD1EEF876100BD6C3F /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4148BAC1EEF876100BD6C3F /* Event.swift */; };
 		D4148BAF1EEF960E00BD6C3F /* EventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4148BAE1EEF960E00BD6C3F /* EventService.swift */; };
 		D4148BB11EEFC53E00BD6C3F /* RxApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4148BB01EEFC53E00BD6C3F /* RxApi.swift */; };
-		D46EAFC41EFCADC600883000 /* CustomObservable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D46EAFC31EFCADC600883000 /* CustomObservable.storyboard */; };
-		D46EAFC61EFCADFE00883000 /* CustomObservableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46EAFC51EFCADFE00883000 /* CustomObservableController.swift */; };
-		D46EAFC81EFCB18D00883000 /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46EAFC71EFCB18D00883000 /* AlbumViewController.swift */; };
-		D46EAFCA1EFCCD9600883000 /* PhotoWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46EAFC91EFCCD9600883000 /* PhotoWriter.swift */; };
+		D46EAFD01EFCF62300883000 /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46EAFCC1EFCF62300883000 /* AlbumViewController.swift */; };
+		D46EAFD11EFCF62300883000 /* CustomObservable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D46EAFCD1EFCF62300883000 /* CustomObservable.storyboard */; };
+		D46EAFD21EFCF62300883000 /* CustomObservableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46EAFCE1EFCF62300883000 /* CustomObservableController.swift */; };
+		D46EAFD31EFCF62300883000 /* PhotoWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46EAFCF1EFCF62300883000 /* PhotoWriter.swift */; };
 		D4ECF99E1EFA15B500FFBF4D /* MultipleCellTypes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4ECF99D1EFA15B500FFBF4D /* MultipleCellTypes.storyboard */; };
 		D4ECF9A01EFA1BE000FFBF4D /* MultipleCellTypesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ECF99F1EFA1BE000FFBF4D /* MultipleCellTypesController.swift */; };
 		D4ECF9A21EFA1D9700FFBF4D /* TextCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ECF9A11EFA1D9700FFBF4D /* TextCollectionViewCell.swift */; };
@@ -60,6 +62,8 @@
 		3A11AEE290E978354AA845CF /* Pods_RxSwift_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwift_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A3D3ED536CD01F6EF5AE36F /* Pods-RxSwift-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwift-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwift-Demo/Pods-RxSwift-Demo.release.xcconfig"; sourceTree = "<group>"; };
 		4E69B518EA2286C4B8D70B8B /* Pods-RxSwift-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwift-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwift-Demo/Pods-RxSwift-Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		97D205B11EFB8325000C8C68 /* GalleryImage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GalleryImage.storyboard; sourceTree = "<group>"; };
+		97D205B31EFB8343000C8C68 /* GalleryImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryImageViewController.swift; sourceTree = "<group>"; };
 		9A7ACE082C1E28806E63EEB1 /* Pods_RxSwift_DemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwift_DemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2753F5CA3C6494A42002141 /* Pods-RxSwift-DemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwift-DemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwift-DemoTests/Pods-RxSwift-DemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		D4148B7D1EEE3A1B00BD6C3F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,10 +90,10 @@
 		D4148BAE1EEF960E00BD6C3F /* EventService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventService.swift; sourceTree = "<group>"; };
 		D4148BB01EEFC53E00BD6C3F /* RxApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxApi.swift; sourceTree = "<group>"; };
 		D449C1F92858282EE5E68961 /* Pods-RxSwift-DemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwift-DemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwift-DemoTests/Pods-RxSwift-DemoTests.debug.xcconfig"; sourceTree = "<group>"; };
-		D46EAFC31EFCADC600883000 /* CustomObservable.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CustomObservable.storyboard; sourceTree = "<group>"; };
-		D46EAFC51EFCADFE00883000 /* CustomObservableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomObservableController.swift; sourceTree = "<group>"; };
-		D46EAFC71EFCB18D00883000 /* AlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
-		D46EAFC91EFCCD9600883000 /* PhotoWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoWriter.swift; sourceTree = "<group>"; };
+		D46EAFCC1EFCF62300883000 /* AlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
+		D46EAFCD1EFCF62300883000 /* CustomObservable.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CustomObservable.storyboard; sourceTree = "<group>"; };
+		D46EAFCE1EFCF62300883000 /* CustomObservableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomObservableController.swift; sourceTree = "<group>"; };
+		D46EAFCF1EFCF62300883000 /* PhotoWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoWriter.swift; sourceTree = "<group>"; };
 		D4ECF99D1EFA15B500FFBF4D /* MultipleCellTypes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MultipleCellTypes.storyboard; sourceTree = "<group>"; };
 		D4ECF99F1EFA1BE000FFBF4D /* MultipleCellTypesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleCellTypesController.swift; sourceTree = "<group>"; };
 		D4ECF9A11EFA1D9700FFBF4D /* TextCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -144,6 +148,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		97D205B01EFB8316000C8C68 /* GalleryImage */ = {
+			isa = PBXGroup;
+			children = (
+				97D205B11EFB8325000C8C68 /* GalleryImage.storyboard */,
+				97D205B31EFB8343000C8C68 /* GalleryImageViewController.swift */,
+			);
+			path = GalleryImage;
+			sourceTree = "<group>";
+		};
 		D4148B7C1EEE3A1B00BD6C3F /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,7 +172,8 @@
 		D4148B871EEE3B8200BD6C3F /* Examples */ = {
 			isa = PBXGroup;
 			children = (
-				D46EAFC21EFCADB000883000 /* CustomObservable */,
+				D46EAFCB1EFCF62300883000 /* CustomObservable */,
+				97D205B01EFB8316000C8C68 /* GalleryImage */,
 				D4ECF99C1EFA158800FFBF4D /* MultipleCellTypes */,
 				D4148BA71EEF856400BD6C3F /* FetchDataNetwork */,
 				D4148B881EEE3B8200BD6C3F /* Calculator */,
@@ -223,13 +237,13 @@
 			path = FetchDataNetwork;
 			sourceTree = "<group>";
 		};
-		D46EAFC21EFCADB000883000 /* CustomObservable */ = {
+		D46EAFCB1EFCF62300883000 /* CustomObservable */ = {
 			isa = PBXGroup;
 			children = (
-				D46EAFC31EFCADC600883000 /* CustomObservable.storyboard */,
-				D46EAFC51EFCADFE00883000 /* CustomObservableController.swift */,
-				D46EAFC71EFCB18D00883000 /* AlbumViewController.swift */,
-				D46EAFC91EFCCD9600883000 /* PhotoWriter.swift */,
+				D46EAFCC1EFCF62300883000 /* AlbumViewController.swift */,
+				D46EAFCD1EFCF62300883000 /* CustomObservable.storyboard */,
+				D46EAFCE1EFCF62300883000 /* CustomObservableController.swift */,
+				D46EAFCF1EFCF62300883000 /* PhotoWriter.swift */,
 			);
 			path = CustomObservable;
 			sourceTree = "<group>";
@@ -391,8 +405,9 @@
 				D4F636191EE6B43400DFF4F4 /* Assets.xcassets in Resources */,
 				D4148B991EEE3B8200BD6C3F /* Calculator.storyboard in Resources */,
 				D4148B9B1EEE3B8200BD6C3F /* Login.storyboard in Resources */,
+				D46EAFD11EFCF62300883000 /* CustomObservable.storyboard in Resources */,
+				97D205B21EFB8325000C8C68 /* GalleryImage.storyboard in Resources */,
 				D4148BA41EEE3B8200BD6C3F /* Search.storyboard in Resources */,
-				D46EAFC41EFCADC600883000 /* CustomObservable.storyboard in Resources */,
 				D4148B851EEE3AF100BD6C3F /* LaunchScreen.storyboard in Resources */,
 				D4ECF99E1EFA15B500FFBF4D /* MultipleCellTypes.storyboard in Resources */,
 				D4148BA31EEE3B8200BD6C3F /* ListCar.storyboard in Resources */,
@@ -522,11 +537,10 @@
 			files = (
 				D4148B9C1EEE3B8200BD6C3F /* LoginViewController.swift in Sources */,
 				D4148B811EEE3A1B00BD6C3F /* BaseViewController.swift in Sources */,
-				D46EAFC61EFCADFE00883000 /* CustomObservableController.swift in Sources */,
-				D46EAFCA1EFCCD9600883000 /* PhotoWriter.swift in Sources */,
 				D4148BAF1EEF960E00BD6C3F /* EventService.swift in Sources */,
 				D4148BA11EEE3B8200BD6C3F /* CarTableViewCell.swift in Sources */,
 				D4148BA51EEE3B8200BD6C3F /* SearchController.swift in Sources */,
+				D46EAFD31EFCF62300883000 /* PhotoWriter.swift in Sources */,
 				D4148B9A1EEE3B8200BD6C3F /* CalculatorController.swift in Sources */,
 				D4148B801EEE3A1B00BD6C3F /* AppDelegate.swift in Sources */,
 				D4148BAB1EEF85AA00BD6C3F /* FetchDataNetworkController.swift in Sources */,
@@ -534,15 +548,17 @@
 				D4148BAD1EEF876100BD6C3F /* Event.swift in Sources */,
 				D4148BA21EEE3B8200BD6C3F /* CarViewModel.swift in Sources */,
 				D4ECF9A41EFA1DA900FFBF4D /* PhotoCollectionViewCell.swift in Sources */,
+				97D205B41EFB8343000C8C68 /* GalleryImageViewController.swift in Sources */,
 				D4148B9E1EEE3B8200BD6C3F /* Car.swift in Sources */,
 				D4148BB11EEFC53E00BD6C3F /* RxApi.swift in Sources */,
 				D4148B9F1EEE3B8200BD6C3F /* CarController.swift in Sources */,
 				D4148BA01EEE3B8200BD6C3F /* CarListViewModel.swift in Sources */,
 				D4ECF9A21EFA1D9700FFBF4D /* TextCollectionViewCell.swift in Sources */,
-				D46EAFC81EFCB18D00883000 /* AlbumViewController.swift in Sources */,
+				D46EAFD01EFCF62300883000 /* AlbumViewController.swift in Sources */,
 				D4F6363C1EE6B50300DFF4F4 /* ViewController.swift in Sources */,
 				D4F6363B1EE6B50300DFF4F4 /* Storyboard.swift in Sources */,
 				D4148B821EEE3A1B00BD6C3F /* ExamplesController.swift in Sources */,
+				D46EAFD21EFCF62300883000 /* CustomObservableController.swift in Sources */,
 				D4ECF9A01EFA1BE000FFBF4D /* MultipleCellTypesController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
