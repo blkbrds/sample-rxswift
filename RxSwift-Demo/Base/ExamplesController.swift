@@ -7,26 +7,31 @@
 //
 
 import UIKit
+import Photos
 
 class ExamplesController: UITableViewController {
 
     enum Demo: Int {
         case calculator = 0
-        case validate
+        case validateLogin
         case search
+        case galleryImage
         case MultipleCellTypes
+        case CustomObservable
         case fetchDataNetwork
         case mvvmDemo
         case currencyExchange
 
-        static let count = 7
+        static let count = 9
 
         var storyboard: String {
             switch self {
             case .calculator: return "Calculator"
-            case .validate: return "Login"
+            case .validateLogin: return "Login"
             case .search: return "Search"
+            case .galleryImage: return "GalleryImage"
             case .MultipleCellTypes: return "MultipleCellTypes"
+            case .CustomObservable: return "CustomObservable"
             case .fetchDataNetwork: return "FetchDataNetwork"
             case .mvvmDemo: return "ListCar"
             case .currencyExchange: return "CurrencyExchange"
@@ -36,10 +41,12 @@ class ExamplesController: UITableViewController {
         var menuName: String {
             switch self {
             case .calculator: return "Calculator"
-            case .validate: return "Validation"
+            case .validateLogin: return "Validation"
             case .search: return "Search"
+            case .galleryImage: return "Gallery Image"
             case .MultipleCellTypes: return "Multiple Cell Custom Types"
-            case .fetchDataNetwork: return "MVVM - Demo"
+            case .CustomObservable: return "Custom Observable"
+            case .fetchDataNetwork: return "Fetching Data From the Web"
             case .mvvmDemo: return "MVVM - GitHub Search Repos"
             case .currencyExchange: return "Currency Exchange"
             }
@@ -51,7 +58,7 @@ class ExamplesController: UITableViewController {
             case .calculator:
                 let controller: CalculatorController = storyboard.instantiateViewController()
                 return controller
-            case .validate:
+            case .validateLogin:
                 let controller: LoginViewController = storyboard.instantiateViewController()
                 return controller
             case .search:
@@ -60,8 +67,14 @@ class ExamplesController: UITableViewController {
             case .MultipleCellTypes:
                 let controller: MultipleCellTypesController = storyboard.instantiateViewController()
                 return controller
+            case .galleryImage:
+                let controller: GalleryImageViewController = storyboard.instantiateViewController()
+                return controller
             case .fetchDataNetwork:
                 let controller: FetchDataNetworkController = storyboard.instantiateViewController()
+                return controller
+            case .CustomObservable:
+                let controller: CustomObservableController = storyboard.instantiateViewController()
                 return controller
             case .mvvmDemo:
                 let controller: CarController = storyboard.instantiateViewController()
@@ -81,12 +94,13 @@ class ExamplesController: UITableViewController {
         return demos
     }()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
     func controllerExampleFor(demo: Demo) -> UIViewController {
         return demo.controller
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        PHPhotoLibrary.requestAuthorization { _ in }
     }
 
     // MARK: - Table view data source
