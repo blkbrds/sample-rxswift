@@ -16,6 +16,7 @@ target 'RxSwift-Demo' do
     pod 'ObjectMapper', '2.2.6'
     pod 'RxSwift',    '~> 3.0'
     pod 'RxCocoa',    '~> 3.0'
+    pod 'RxAlamofire'
     pod 'MVVM-Swift'
     target 'RxSwift-DemoTests' do
         project 'RxSwift-Demo'
