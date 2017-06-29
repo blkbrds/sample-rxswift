@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		57E5C1CF30F6F6B0507E4CFF /* Pods_RxSwift_DemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A7ACE082C1E28806E63EEB1 /* Pods_RxSwift_DemoTests.framework */; };
+		972F6DD61F04D85A007E11DA /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972F6DD51F04D85A007E11DA /* Annotation.swift */; };
 		9773F28D1F04B3A400CCF5F0 /* MapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9773F28C1F04B3A400CCF5F0 /* MapView.storyboard */; };
 		9773F28F1F04B3BA00CCF5F0 /* MapViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9773F28E1F04B3BA00CCF5F0 /* MapViewViewController.swift */; };
 		97D205B21EFB8325000C8C68 /* GalleryImage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97D205B11EFB8325000C8C68 /* GalleryImage.storyboard */; };
@@ -64,6 +65,7 @@
 		3A11AEE290E978354AA845CF /* Pods_RxSwift_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwift_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A3D3ED536CD01F6EF5AE36F /* Pods-RxSwift-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwift-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwift-Demo/Pods-RxSwift-Demo.release.xcconfig"; sourceTree = "<group>"; };
 		4E69B518EA2286C4B8D70B8B /* Pods-RxSwift-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwift-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwift-Demo/Pods-RxSwift-Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		972F6DD51F04D85A007E11DA /* Annotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
 		9773F28C1F04B3A400CCF5F0 /* MapView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MapView.storyboard; sourceTree = "<group>"; };
 		9773F28E1F04B3BA00CCF5F0 /* MapViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewViewController.swift; sourceTree = "<group>"; };
 		97D205B11EFB8325000C8C68 /* GalleryImage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GalleryImage.storyboard; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 			children = (
 				9773F28C1F04B3A400CCF5F0 /* MapView.storyboard */,
 				9773F28E1F04B3BA00CCF5F0 /* MapViewViewController.swift */,
+				972F6DD51F04D85A007E11DA /* Annotation.swift */,
 			);
 			path = MapView;
 			sourceTree = "<group>";
@@ -566,6 +569,7 @@
 				D4ECF9A41EFA1DA900FFBF4D /* PhotoCollectionViewCell.swift in Sources */,
 				97D205B41EFB8343000C8C68 /* GalleryImageViewController.swift in Sources */,
 				D4148B9E1EEE3B8200BD6C3F /* Car.swift in Sources */,
+				972F6DD61F04D85A007E11DA /* Annotation.swift in Sources */,
 				D4148BB11EEFC53E00BD6C3F /* RxApi.swift in Sources */,
 				D4148B9F1EEE3B8200BD6C3F /* CarController.swift in Sources */,
 				D4148BA01EEE3B8200BD6C3F /* CarListViewModel.swift in Sources */,
