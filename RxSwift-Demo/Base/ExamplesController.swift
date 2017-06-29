@@ -20,6 +20,7 @@ class ExamplesController: UITableViewController {
         case CustomObservable
         case fetchDataNetwork
         case mvvmDemo
+        case mapView
 
         var storyboard: String {
             switch self {
@@ -31,6 +32,7 @@ class ExamplesController: UITableViewController {
             case .CustomObservable: return "CustomObservable"
             case .fetchDataNetwork: return "FetchDataNetwork"
             case .mvvmDemo: return "ListCar"
+            case .mapView: return "MapView"
             }
         }
     }
@@ -45,6 +47,7 @@ class ExamplesController: UITableViewController {
         "Custom Observable",
         "Fetching Data From the Web",
         "MVVM - Demo",
+        "Map View",
         "MVVM - GitHub Search Repos"
     ]
 
@@ -79,6 +82,9 @@ class ExamplesController: UITableViewController {
             return controller
         case .mvvmDemo:
             let controller: CarController = storyboard.instantiateViewController()
+            return controller
+        case .mapView:
+            let controller: MapViewViewController = storyboard.instantiateViewController()
             return controller
         }
     }
