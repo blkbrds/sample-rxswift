@@ -90,7 +90,9 @@ example(of: "flatMapLatest") {
     /*
      switchLatest will produce values from the most recent observable, and unsubscribe from the previous observable.
 
-     Projects each element of an observable sequence into a new sequence of observable sequences and then transforms an observable sequence of observable sequences into an observable sequence "producing values only from the most recent observable sequence".
+     Projects each element of an observable sequence into a new sequence of observable sequences 
+     and then transforms an observable sequence of observable sequences into an observable 
+     sequence "producing values only from the most recent observable sequence".
      */
 
     let disposeBag = DisposeBag()
