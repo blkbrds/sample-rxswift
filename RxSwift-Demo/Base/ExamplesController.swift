@@ -17,6 +17,7 @@ class ExamplesController: UITableViewController {
         case search
         case galleryImage
         case MultipleCellTypes
+        case mapView
         case CustomObservable
         case fetchDataNetwork
         case mvvmDemo
@@ -28,6 +29,7 @@ class ExamplesController: UITableViewController {
             case .search: return "Search"
             case .galleryImage: return "GalleryImage"
             case .MultipleCellTypes: return "MultipleCellTypes"
+            case .mapView: return "MapView"
             case .CustomObservable: return "CustomObservable"
             case .fetchDataNetwork: return "FetchDataNetwork"
             case .mvvmDemo: return "ListCar"
@@ -42,6 +44,7 @@ class ExamplesController: UITableViewController {
         "Search",
         "Gallery Image",
         "Multiple Cell Custom Types",
+        "RxMapKit",
         "Custom Observable",
         "Fetching Data From the Web",
         "MVVM - Demo",
@@ -70,6 +73,9 @@ class ExamplesController: UITableViewController {
             return controller
         case .MultipleCellTypes:
             let controller: MultipleCellTypesController = storyboard.instantiateViewController()
+            return controller
+        case .mapView:
+            let controller: MapViewViewController = storyboard.instantiateViewController()
             return controller
         case .CustomObservable:
             let controller: CustomObservableController = storyboard.instantiateViewController()

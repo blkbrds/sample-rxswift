@@ -13,6 +13,9 @@ PODS:
     - Realm (= 2.8.0)
   - RxCocoa (3.5.0):
     - RxSwift (~> 3.4)
+  - RxMapKit (1.1.0):
+    - RxCocoa (~> 3.2)
+    - RxSwift (~> 3.2)
   - RxSwift (3.5.0)
   - SAMKeychain (1.5.2)
   - SwiftLint (0.16.1)
@@ -24,6 +27,7 @@ DEPENDENCIES:
   - ObjectMapper (= 2.2.6)
   - RealmS (~> 2.3.1)
   - RxCocoa (~> 3.0)
+  - RxMapKit (~> 1.1.0)
   - RxSwift (~> 3.0)
   - SAMKeychain (~> 1.5.1)
   - SwiftLint (~> 0.16.1)
@@ -32,15 +36,16 @@ SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
   Kingfisher: 9950e382c500b6834ce004c7c4131c444e90c3a1
   MVVM-Swift: 54749cc12bb30af41632f30a2c576a18bf9e4bc8
-  ObjectMapper: '042708195cc46c20871cbcbec0453826398273fd'
+  ObjectMapper: 042708195cc46c20871cbcbec0453826398273fd
   Realm: 929243ad2b618b3232e70658bedc61110e7563f1
   RealmS: 939afb24205b83c0af75770bcf06347b6e5df0da
   RealmSwift: 5b7079b891f2833d1849294161ba3e092bbda3f6
   RxCocoa: a0a09f45d0e5b48ecb6a4a7b4b4c89c88d3f633f
+  RxMapKit: 2b53cdb00f94a669b6c41a705fb341094a16abc5
   RxSwift: 18ee9d78b45edb3b0b7e79916b47a116e6dbc842
   SAMKeychain: 1865333198217411f35327e8da61b43de79b635b
   SwiftLint: b8b683208cc09640898f16318a7a452274e91f61
 
-PODFILE CHECKSUM: 62362b81d3196fd10a7aebdf7f97a57259620a36
+PODFILE CHECKSUM: a02eaa38f5ab0fa65aff564a1e8a48f8165867c8
 
 COCOAPODS: 1.2.1

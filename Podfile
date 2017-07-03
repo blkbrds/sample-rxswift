@@ -17,6 +17,7 @@ target 'RxSwift-Demo' do
     pod 'RxSwift',    '~> 3.0'
     pod 'RxCocoa',    '~> 3.0'
     pod 'MVVM-Swift'
+    pod 'RxMapKit', '~> 1.1.0'
     target 'RxSwift-DemoTests' do
         project 'RxSwift-Demo'
         inherit! :search_paths
