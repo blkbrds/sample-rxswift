@@ -17,20 +17,22 @@ class ExamplesController: UITableViewController {
         case search
         case galleryImage
         case MultipleCellTypes
+        case mapView
         case CustomObservable
         case fetchDataNetwork
         case mvvmDemo
         case currencyExchange
 
-        static let count = 9
+        static let count = 10
 
-        var storyboard: String {
+        private var storyboard: String {
             switch self {
             case .calculator: return "Calculator"
             case .validateLogin: return "Login"
             case .search: return "Search"
             case .galleryImage: return "GalleryImage"
             case .MultipleCellTypes: return "MultipleCellTypes"
+            case .mapView: return "MapView"
             case .CustomObservable: return "CustomObservable"
             case .fetchDataNetwork: return "FetchDataNetwork"
             case .mvvmDemo: return "ListCar"
@@ -41,14 +43,15 @@ class ExamplesController: UITableViewController {
         var menuName: String {
             switch self {
             case .calculator: return "Calculator"
-            case .validateLogin: return "Validation"
+            case .validateLogin: return "Validate Login"
             case .search: return "Search"
             case .galleryImage: return "Gallery Image"
             case .MultipleCellTypes: return "Multiple Cell Custom Types"
             case .CustomObservable: return "Custom Observable"
             case .fetchDataNetwork: return "Fetching Data From the Web"
-            case .mvvmDemo: return "MVVM - GitHub Search Repos"
+            case .mvvmDemo: return "MVVM - Demo"
             case .currencyExchange: return "Currency Exchange"
+            case .mapView: return "Map View"
             }
         }
 
@@ -81,6 +84,9 @@ class ExamplesController: UITableViewController {
                 return controller
             case .currencyExchange:
                 let controller: CurrencyExchangeVC = storyboard.instantiateViewController()
+                return controller
+            case .mapView:
+                let controller: MapViewViewController = storyboard.instantiateViewController()
                 return controller
             }
         }

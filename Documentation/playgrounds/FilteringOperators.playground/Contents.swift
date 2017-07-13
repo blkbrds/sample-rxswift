@@ -1,4 +1,4 @@
-//: Playground - noun: a place where people can play
+//: Playground - Example about "Filtering Operators" in RxSwift
 
 import UIKit
 import RxSwift
