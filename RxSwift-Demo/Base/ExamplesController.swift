@@ -16,77 +16,93 @@ class ExamplesController: UITableViewController {
         case validateLogin
         case search
         case galleryImage
-        case MultipleCellTypes
+        case multipleCellTypes
         case mapView
-        case CustomObservable
+        case customObservable
         case fetchDataNetwork
         case mvvmDemo
+        case currencyExchange
 
-        var storyboard: String {
+        static let count = 10
+
+        private var storyboard: String {
             switch self {
             case .calculator: return "Calculator"
             case .validateLogin: return "Login"
             case .search: return "Search"
             case .galleryImage: return "GalleryImage"
-            case .MultipleCellTypes: return "MultipleCellTypes"
+            case .multipleCellTypes: return "MultipleCellTypes"
             case .mapView: return "MapView"
-            case .CustomObservable: return "CustomObservable"
+            case .customObservable: return "CustomObservable"
             case .fetchDataNetwork: return "FetchDataNetwork"
             case .mvvmDemo: return "ListCar"
+            case .currencyExchange: return "CurrencyExchange"
+            }
+        }
+
+        var menuName: String {
+            switch self {
+            case .calculator: return "Calculator"
+            case .validateLogin: return "Validate Login"
+            case .search: return "Search"
+            case .galleryImage: return "Gallery Image"
+            case .multipleCellTypes: return "Multiple Cell Custom Types"
+            case .customObservable: return "Custom Observable"
+            case .fetchDataNetwork: return "Fetching Data From the Web"
+            case .mvvmDemo: return "MVVM - Demo"
+            case .currencyExchange: return "Currency Exchange"
+            case .mapView: return "Map View"
+            }
+        }
+
+        var controller: UIViewController {
+            let storyboard = UIStoryboard(name: self.storyboard, bundle: nil)
+            switch self {
+            case .calculator:
+                let controller: CalculatorController = storyboard.instantiateViewController()
+                return controller
+            case .validateLogin:
+                let controller: LoginViewController = storyboard.instantiateViewController()
+                return controller
+            case .search:
+                let controller: SearchController = storyboard.instantiateViewController()
+                return controller
+            case .multipleCellTypes:
+                let controller: MultipleCellTypesController = storyboard.instantiateViewController()
+                return controller
+            case .galleryImage:
+                let controller: GalleryImageViewController = storyboard.instantiateViewController()
+                return controller
+            case .fetchDataNetwork:
+                let controller: FetchDataNetworkController = storyboard.instantiateViewController()
+                return controller
+            case .customObservable:
+                let controller: CustomObservableController = storyboard.instantiateViewController()
+                return controller
+            case .mvvmDemo:
+                let controller: CarController = storyboard.instantiateViewController()
+                return controller
+            case .currencyExchange:
+                let controller: CurrencyExchangeVC = storyboard.instantiateViewController()
+                return controller
+            case .mapView:
+                let controller: MapViewViewController = storyboard.instantiateViewController()
+                return controller
             }
         }
     }
 
     // TODO: examples implement
-    var examples: [String] = [
-        "Calculator",
-        "Validate Login",
-        "Search",
-        "Gallery Image",
-        "Multiple Cell Custom Types",
-        "RxMapKit",
-        "Custom Observable",
-        "Fetching Data From the Web",
-        "MVVM - Demo",
-        "MVVM - GitHub Search Repos"
-    ]
+    lazy var examples: [Demo?] = { () -> [Demo?] in
+        let demos = Array(0..<Demo.count).map({ (index) -> Demo? in
+            return Demo(rawValue: index)
+        })
+        return demos
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         PHPhotoLibrary.requestAuthorization { _ in }
-    }
-
-    func controllerExampleFor(demo: Demo) -> UIViewController {
-        let storyboard = UIStoryboard(name: demo.storyboard, bundle: nil)
-        switch demo {
-        case .calculator:
-            let controller: CalculatorController = storyboard.instantiateViewController()
-            return controller
-        case .validateLogin:
-            let controller: LoginViewController = storyboard.instantiateViewController()
-            return controller
-        case .search:
-            let controller: SearchController = storyboard.instantiateViewController()
-            return controller
-        case .galleryImage:
-            let controller: GalleryImageViewController = storyboard.instantiateViewController()
-            return controller
-        case .MultipleCellTypes:
-            let controller: MultipleCellTypesController = storyboard.instantiateViewController()
-            return controller
-        case .mapView:
-            let controller: MapViewViewController = storyboard.instantiateViewController()
-            return controller
-        case .CustomObservable:
-            let controller: CustomObservableController = storyboard.instantiateViewController()
-            return controller
-        case .fetchDataNetwork:
-            let controller: FetchDataNetworkController = storyboard.instantiateViewController()
-            return controller
-        case .mvvmDemo:
-            let controller: CarController = storyboard.instantiateViewController()
-            return controller
-        }
     }
 
     // MARK: - Table view data source
@@ -97,13 +113,13 @@ class ExamplesController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = examples[indexPath.row]
+        cell.textLabel?.text = examples[indexPath.row]?.menuName
         return cell
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let demo = Demo(rawValue: indexPath.row) else { return }
-        let controller = controllerExampleFor(demo: demo)
+        guard let demo = examples[indexPath.row] else { return }
+        let controller = demo.controller
         navigationController?.pushViewController(controller, animated: true)
     }
 }

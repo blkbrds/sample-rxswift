@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		565FFE0A1F148E98005D27B9 /* CurrencyExchange.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 565FFE081F148E98005D27B9 /* CurrencyExchange.storyboard */; };
+		565FFE0B1F148E98005D27B9 /* CurrencyExchangeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565FFE091F148E98005D27B9 /* CurrencyExchangeVC.swift */; };
 		57E5C1CF30F6F6B0507E4CFF /* Pods_RxSwift_DemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A7ACE082C1E28806E63EEB1 /* Pods_RxSwift_DemoTests.framework */; };
 		972F6DD61F04D85A007E11DA /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972F6DD51F04D85A007E11DA /* Annotation.swift */; };
 		9773F28D1F04B3A400CCF5F0 /* MapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9773F28C1F04B3A400CCF5F0 /* MapView.storyboard */; };
@@ -65,6 +67,8 @@
 		3A11AEE290E978354AA845CF /* Pods_RxSwift_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwift_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A3D3ED536CD01F6EF5AE36F /* Pods-RxSwift-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwift-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwift-Demo/Pods-RxSwift-Demo.release.xcconfig"; sourceTree = "<group>"; };
 		4E69B518EA2286C4B8D70B8B /* Pods-RxSwift-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwift-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwift-Demo/Pods-RxSwift-Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		565FFE081F148E98005D27B9 /* CurrencyExchange.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CurrencyExchange.storyboard; sourceTree = "<group>"; };
+		565FFE091F148E98005D27B9 /* CurrencyExchangeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyExchangeVC.swift; sourceTree = "<group>"; };
 		972F6DD51F04D85A007E11DA /* Annotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
 		9773F28C1F04B3A400CCF5F0 /* MapView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MapView.storyboard; sourceTree = "<group>"; };
 		9773F28E1F04B3BA00CCF5F0 /* MapViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +147,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		565FFE071F148E98005D27B9 /* CurrencyExchange */ = {
+			isa = PBXGroup;
+			children = (
+				565FFE081F148E98005D27B9 /* CurrencyExchange.storyboard */,
+				565FFE091F148E98005D27B9 /* CurrencyExchangeVC.swift */,
+			);
+			path = CurrencyExchange;
+			sourceTree = "<group>";
+		};
 		61C9242C48238C2B8DF8244A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +201,7 @@
 		D4148B871EEE3B8200BD6C3F /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				565FFE071F148E98005D27B9 /* CurrencyExchange */,
 				9773F28B1F04B39500CCF5F0 /* MapView */,
 				D46EAFCB1EFCF62300883000 /* CustomObservable */,
 				97D205B01EFB8316000C8C68 /* GalleryImage */,
@@ -429,6 +443,7 @@
 				D4148B851EEE3AF100BD6C3F /* LaunchScreen.storyboard in Resources */,
 				D4ECF99E1EFA15B500FFBF4D /* MultipleCellTypes.storyboard in Resources */,
 				D4148BA31EEE3B8200BD6C3F /* ListCar.storyboard in Resources */,
+				565FFE0A1F148E98005D27B9 /* CurrencyExchange.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,6 +590,7 @@
 				D4148BA01EEE3B8200BD6C3F /* CarListViewModel.swift in Sources */,
 				D4ECF9A21EFA1D9700FFBF4D /* TextCollectionViewCell.swift in Sources */,
 				D46EAFD01EFCF62300883000 /* AlbumViewController.swift in Sources */,
+				565FFE0B1F148E98005D27B9 /* CurrencyExchangeVC.swift in Sources */,
 				D4F6363C1EE6B50300DFF4F4 /* ViewController.swift in Sources */,
 				D4F6363B1EE6B50300DFF4F4 /* Storyboard.swift in Sources */,
 				D4148B821EEE3A1B00BD6C3F /* ExamplesController.swift in Sources */,
