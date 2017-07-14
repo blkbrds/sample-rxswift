@@ -57,8 +57,38 @@ class ExamplesController: UITableViewController {
 
         var controller: UIViewController {
             let storyboard = UIStoryboard(name: self.storyboard, bundle: nil)
-            let controller = storyboard.instantiateViewController()
-            return controller
+            switch self {
+            case .calculator:
+                let controller: CalculatorController = storyboard.instantiateViewController()
+                return controller
+            case .validateLogin:
+                let controller: LoginViewController = storyboard.instantiateViewController()
+                return controller
+            case .search:
+                let controller: SearchController = storyboard.instantiateViewController()
+                return controller
+            case .multipleCellTypes:
+                let controller: MultipleCellTypesController = storyboard.instantiateViewController()
+                return controller
+            case .galleryImage:
+                let controller: GalleryImageViewController = storyboard.instantiateViewController()
+                return controller
+            case .fetchDataNetwork:
+                let controller: FetchDataNetworkController = storyboard.instantiateViewController()
+                return controller
+            case .customObservable:
+                let controller: CustomObservableController = storyboard.instantiateViewController()
+                return controller
+            case .mvvmDemo:
+                let controller: CarController = storyboard.instantiateViewController()
+                return controller
+            case .currencyExchange:
+                let controller: CurrencyExchangeVC = storyboard.instantiateViewController()
+                return controller
+            case .mapView:
+                let controller: MapViewViewController = storyboard.instantiateViewController()
+                return controller
+            }
         }
     }
 
